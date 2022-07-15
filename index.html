@@ -30,9 +30,10 @@
             <img
               src="img/Logo.png"
               alt="Logo Spotifake"
+              id="imgLogo"
               width="60"
               height="48"
-              class="ms-3"
+              class="ms-5"
             />
           </a>
           <button
@@ -79,9 +80,7 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
+              <button class="btn" type="submit">Search</button>
             </form>
           </div>
         </div>
@@ -97,7 +96,7 @@
               >
                 <div class="ms-2 me-auto">
                   <div>
-                    <a href="" class="fw-bold">Inicio</a>
+                    <a href="" class="tituloAside">Inicio</a>
                   </div>
                 </div>
               </li>
@@ -106,9 +105,9 @@
               >
                 <div class="ms-2 me-auto">
                   <div>
-                    <a href="" class="fw-bold">Categorias</a>
+                    <a href="" class="tituloAside">Categorias</a>
                   </div>
-                  <ul class="list-unstyled ms-4">
+                  <ul class="list-unstyled">
                     <li><a href="">Rock</a></li>
                     <li><a href="">Salsa</a></li>
                     <li><a href="">Cumbia</a></li>
@@ -122,9 +121,9 @@
               >
                 <div class="ms-2 me-auto">
                   <div>
-                    <a href="" class="fw-bold">Artistas</a>
+                    <a href="" class="tituloAside">Artistas</a>
                   </div>
-                  <ul class="list-unstyled ms-4">
+                  <ul class="list-unstyled">
                     <li><a href="">La Konga</a></li>
                     <li><a href="">Taylor Swift</a></li>
                     <li><a href="">Bon Jovi</a></li>
@@ -139,7 +138,21 @@
         <article class="col-9"></article>
       </section>
     </main>
-    <footer>
+    <footer class="p-5 row d-flex justify-content-center">
+      <article class="col-1">
+        <img src="img/Logo.png" alt="" class="w-100" id="imgLogo" />
+      </article>
+      <article class="col-3 text-center">
+        <h5>Explorar</h5>
+        <ul class="list-unstyled text-center">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pages/acercade.html">Quienes somos</a></li>
+          <li><a href="pages/administracion.html">Administracion</a></li>
+        </ul>
+      </article>
+      <article class="col-3 text-center">
+        <h5>Seguinos en las redes</h5>
+      </article>
     </footer>
 
     <script

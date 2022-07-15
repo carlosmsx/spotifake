@@ -1,23 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   color: white;
 }
 
-/* Colores */
+/* Navbar*/
+ nav .btn{
+    border: 2px solid #FF4365;
+    color: #FF4365;
+ }
 
 nav,
 aside,
 footer,
 .list-group-item,
 footer {
-  background-color: #5a4c6e;
-  color: black;
+  background-color: #2e294e;
+  color: white;
 }
 
-a {
+footer h5 {
+  color: white;
+  font-weight: 500;
+}
+
+a,
+li,
+h5 {
   color: white;
   text-decoration: none;
+}
+
+a:hover {
+  color: #ff4365;
+}
+
+.nav-link {
+  color: white;
+}
+
+#imgLogo {
+  object-fit: contain;
+}
+
+.tituloAside {
+  font-weight: 700;
+  font-size: larger;
 }
