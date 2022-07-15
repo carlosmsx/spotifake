@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+/* Colores */
+
+nav,
+aside,
+footer,
+.list-group-item,
+footer {
+  background-color: #5a4c6e;
+  color: black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

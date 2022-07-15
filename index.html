@@ -1,17 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyecto final modulo 2. Comision 2i">
-    <meta name="author" content="Otto Krautmann, Vale Ormaechea, Nicolas Andrade, Carlos Escobar">
-    <meta name="keywords" content="javascript html proyecto final c2i rollingcode musica spotifake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto final modulo 2. Comision 2i" />
+    <meta
+      name="author"
+      content="Otto Krautmann, Vale Ormaechea, Nicolas Andrade, Carlos Escobar"
+    />
+    <meta
+      name="keywords"
+      content="javascript html proyecto final c2i rollingcode musica spotifake"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Spotifake</title>
-</head>
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-</body>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="img/Logo.png"
+              alt="Logo Spotifake"
+              width="60"
+              height="48"
+              class="ms-3"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Registro</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Login
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Usuario</a></li>
+                  <li><a class="dropdown-item" href="#">Administrador</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="row w-100">
+        <article class="col-3">
+          <aside class="h-100">
+            <ol class="list-group">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div>
+                    <a href="" class="fw-bold">Inicio</a>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div>
+                    <a href="" class="fw-bold">Categorias</a>
+                  </div>
+                  <ul class="list-unstyled ms-4">
+                    <li><a href="">Rock</a></li>
+                    <li><a href="">Salsa</a></li>
+                    <li><a href="">Cumbia</a></li>
+                    <li><a href="">Pop</a></li>
+                    <li><a href="">Folklore</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start"
+              >
+                <div class="ms-2 me-auto">
+                  <div>
+                    <a href="" class="fw-bold">Artistas</a>
+                  </div>
+                  <ul class="list-unstyled ms-4">
+                    <li><a href="">La Konga</a></li>
+                    <li><a href="">Taylor Swift</a></li>
+                    <li><a href="">Bon Jovi</a></li>
+                    <li><a href="">Coldplay</a></li>
+                    <li><a href="">Los Manseros</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ol>
+          </aside>
+        </article>
+        <article class="col-9"></article>
+      </section>
+    </main>
+    <footer>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
