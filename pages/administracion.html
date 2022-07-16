@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../css/bootstrap.min.css" />
         <link rel="stylesheet" href="../css/style.css" />
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <title>Administracion</title>
+        <title>Administracion de canciones</title>
     </head>
     <body>
         <header>
@@ -78,44 +78,32 @@
             </nav>
           </header>
       
-        <main class="container my-5">
+        <main class="container-fluid py-5 bg-black">
             <h1 class="display-4 text-center">Administrador de canciones</h1>
             <hr />
-            <section class="d-flex">
-                <p class="mb-0">Opciones:</p>
-                <button id="btnCrearCancion" class="btn btn-primary btn-sm ms-3">
-                    <i class="bi bi-plus-square me-2"></i>Agregar
-                </button>
-            </section>
             <section class="mt-5">
-                <h2 class="display-6">Lista de Canciones</h2>
+                <div class="d-flex">
+                    <h4>Canciones disponibles</h4>
+                    <button id="btnCrearCancion" class="btn btn-sm btn-primary btn-sm ms-3">
+                        <i class="bi bi-plus-square me-2"></i>Agregar
+                    </button>
+                </div>
                 <hr />
                 <article class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Cod.</th>
-                                <th scope="col">Titulo</th>
+                                <th scope="col">C&oacute;digo</th>
+                                <th scope="col">T&iacute;tulo</th>
                                 <th scope="col">Artista o grupo</th>
-                                <th scope="col">Categoria</th>
-                                <th scope="col">Imagen</th>
-                                <th scope="col">Duracion</th>
-                                <th scope="col">Cancion</th>
+                                <th scope="col">Categor&iacute;a</th>
+                                <th scope="col">Im&aacute;gen</th>
+                                <th scope="col">Duraci&oacute;n</th>
+                                <th scope="col">Canci&oacute;n</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
                         <tbody id="tablaCanciones">
-                            <!-- <tr>
-                            <th scope="row">1</th>
-                            <td>Robotech</td>
-                            <td><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste at officia sapiente suscipit aperiam consequatur ut voluptatibus iure! Id, temporibus!</p></td>
-                            <td>http://url.de.prueba</td>
-                            <td>Accion</td>
-                            <td class="d-flex">
-                                <button class="btn btn-warning me-1"><i class="bi bi-pencil-square"></i></button>
-                                <button class="btn btn-danger"><i class="bi bi-x-square"></i></button>
-                            </td>
-                        </tr> -->
                         </tbody>
                     </table>
                 </article>
@@ -127,13 +115,13 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Nueva cancion</h5>
+                        <h5 class="modal-title">Nueva canci&oacute;n</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form id="formCancion">
                             <div class="mb-3">
-                                <label for="codigo">Codigo</label>
+                                <label for="codigo">C&oacute;digo</label>
                                 <input
                                     id="codigo"
                                     type="text"
@@ -145,7 +133,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="titulo">Titulo</label>
+                                <label for="titulo">T&iacute;tulo</label>
                                 <input
                                     id="titulo"
                                     type="text"
@@ -169,7 +157,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="categoria">Categoria</label>
+                                <label for="categoria">Categor&iacute;a</label>
                                 <select id="categoria" class="form-control" required>
                                     <option value="">Seleccione una opcion</option>
                                     <option value="accion">Rock</option>
@@ -191,7 +179,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="duracion">Duracion</label>
+                                <label for="duracion">Duraci&oacute;n</label>
                                 <input
                                     id="duracion"
                                     type="text"
@@ -203,7 +191,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="cancion">Cancion</label>
+                                <label for="cancion">Canci&oacute;n</label>
                                 <input
                                     id="cancion"
                                     type="text"
@@ -222,14 +210,14 @@
         </div>
         <footer class="p-5 row d-flex justify-content-center">
             <article class="col-1">
-              <img src="img/Logo.png" alt="" class="w-100" id="imgLogo" />
+              <img src="../img/Logo.png" alt="" class="w-100" id="imgLogo" />
             </article>
             <article class="col-3 text-center">
               <h5>Explorar</h5>
               <ul class="list-unstyled text-center">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/acercade.html">Quienes somos</a></li>
-                <li><a href="pages/administracion.html">Administracion</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="acercade.html">Quienes somos</a></li>
+                <li><a href="administracion.html">Administracion</a></li>
               </ul>
             </article>
             <article class="col-3 text-center">

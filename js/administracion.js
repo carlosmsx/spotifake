@@ -24,7 +24,7 @@ let tablaCanciones = document.getElementById("tablaCanciones")
 
 btnCrearCancion.addEventListener("click", ()=>{
     limpiarFormulario()
-    //generar codigo unico 
+    //asignar codigo unico 
     codigo.value = getUniqueId();
     modalAdminCancion.show()
 })
