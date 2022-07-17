@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
@@ -9,19 +6,34 @@
   color: white;
 }
 
-/* Navbar*/
- nav .btn{
-    border: 2px solid #FF4365;
-    color: #FF4365;
- }
+/* Navbar y footer*/
+
+nav .btn {
+  border: 2px solid #ff4365;
+  color: #ff4365;
+}
+
+nav .btn:hover {
+  border: 2px solid #05a1ad;
+  color: #05a1ad;
+}
 
 nav,
-aside,
+.offcanvasLista,
 footer,
-.list-group-item,
-footer {
+#offcanvasExplorar {
   background-color: #2e294e;
   color: white;
+  border: 0;
+}
+
+#navDropdown {
+  background-color: #05a1ad;
+}
+
+#navDropdown a:hover {
+  background-color: #05a1ad;
+  color: #ff4365;
 }
 
 footer h5 {
@@ -29,18 +41,20 @@ footer h5 {
   font-weight: 500;
 }
 
-a,
-li,
-h5 {
+.offcanvasLista a,
+footer a,
+.navLista {
   color: white;
   text-decoration: none;
 }
 
-a:hover {
+.offcanvasLista a:hover,
+footer a:hover,
+.navLista:hover {
   color: #ff4365;
 }
 
-.nav-link {
+nav a {
   color: white;
 }
 
@@ -48,7 +62,13 @@ a:hover {
   object-fit: contain;
 }
 
-.tituloAside {
+.offcanvasListaTitulo {
   font-weight: 700;
   font-size: larger;
+}
+
+#offcanvasLabel {
+  font-size: xx-large;
+  font-weight: 700;
+  color: #ff4365;
 }
