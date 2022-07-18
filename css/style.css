@@ -52,3 +52,12 @@ a:hover {
   font-weight: 700;
   font-size: larger;
 }
+
+/* estilo para recortar valore largos en las tablas */
+td p
+{
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
