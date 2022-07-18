@@ -103,11 +103,11 @@ function crearFila(cancion)
     <td>${cancion.titulo}</td>
     <td>${cancion.artista}</td>
     <td>${cancion.categoria}</td>
-    <td>${cancion.imagen}</td>
+    <td><p>${cancion.imagen}</p></td>
     <td>${cancion.duracion}</td>
-    <td>${cancion.cancion}</td>
+    <td><p>${cancion.cancion}</p></td>
     <td class="d-flex">
-        <button class="btn btn-sm btn-warning me-1"><i class="bi bi-pencil-square"></i></button>
+        <button class="btn btn-sm btn-warning me-1" onclick="modificarCancion('${cancion.codigo}')"><i class="bi bi-pencil-square"></i></button>
         <button class="btn btn-sm btn-danger" onclick="borrarCancion('${cancion.codigo}')"><i class="bi bi-x-square"></i></button>
     </td>
     </tr>`
@@ -145,4 +145,9 @@ window.borrarCancion = function(codigo)
 function borrarTabla()
 {
     tablaCanciones.innerHTML = "";
+}
+
+window.modificarCancion = function(codigo)
+{
+    console.log(`modificar cancion ${codigo}`)
 }
