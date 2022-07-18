@@ -54,8 +54,8 @@ footer a:hover,
   color: #ff4365;
 }
 
-.navLista:active {
-  color: #05a1ad;
+nav a {
+  color: white;
 }
 
 #imgLogo {
