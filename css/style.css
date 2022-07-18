@@ -54,10 +54,6 @@ footer a:hover,
   color: #ff4365;
 }
 
-nav a {
-  color: white;
-}
-
 #imgLogo {
   object-fit: contain;
 }
