@@ -54,8 +54,8 @@ footer a:hover,
   color: #ff4365;
 }
 
-nav a {
-  color: white;
+.navLista.active {
+  color: #05a1ad !important;
 }
 
 #imgLogo {
@@ -71,4 +71,10 @@ nav a {
   font-size: xx-large;
   font-weight: 700;
   color: #ff4365;
+}
+
+/* Main ADN*/
+
+.fondoCeleste{
+  background-color: #006D77;
 }
