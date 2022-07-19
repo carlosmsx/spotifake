@@ -95,7 +95,7 @@
                             <tr>
                                 <th scope="col">C&oacute;digo</th>
                                 <th scope="col">T&iacute;tulo</th>
-                                <th scope="col">Artista o grupo</th>
+                                <th scope="col">Artista</th>
                                 <th scope="col">Categor&iacute;a</th>
                                 <th scope="col">Im&aacute;gen</th>
                                 <th scope="col">Duraci&oacute;n</th>
@@ -113,7 +113,7 @@
         <!-- modal para administrar canciones -->
         <div class="modal fade" id="modalCancion" tabindex="-1">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content bg-black border-light">
                     <div class="modal-header">
                         <h5 class="modal-title">Nueva canci&oacute;n</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -145,7 +145,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="artista">Artista o grupo</label>
+                                <label for="artista">Artista</label>
                                 <input
                                     id="artista"
                                     type="text"
@@ -160,10 +160,11 @@
                                 <label for="categoria">Categor&iacute;a</label>
                                 <select id="categoria" class="form-control" required>
                                     <option value="">Seleccione una opcion</option>
-                                    <option value="accion">Rock</option>
-                                    <option value="drama">Folklore</option>
-                                    <option value="comedia">Trap</option>
-                                    <option value="aventura">Regaeton</option>
+                                    <option value="rock">Rock</option>
+                                    <option value="salsa">Salsa</option>
+                                    <option value="cumbia">Cumbia</option>
+                                    <option value="pop">Pop</option>
+                                    <option value="floklore">Floklore</option>
                                 </select>
                             </div>
                             <div class="mb-3">
