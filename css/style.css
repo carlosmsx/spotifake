@@ -8,7 +8,14 @@
   font-weight: 300;
   color: white;
 }
-
+.img-principal{
+  background-image: url(https://i.pinimg.com/564x/cd/f7/22/cdf722f4d4ae217f52dea4c1e26658e2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* height: 2000px; */
+  background-attachment: fixed;
+  background-size:cover;
+}
 /* Navbar*/
  nav .btn{
     border: 2px solid #FF4365;
@@ -63,7 +70,11 @@ a:hover {
     object-fit: cover;
 }
 .color-tarjeta{
-  background-color: #05a1ad ;
+  background-color: #05a2ad ;
+}
+.padding-tarjetas{
+  padding-left: 150px;
+  padding-right: 150px;
 }
 .bg-fila-canciones{
   background: rgba(0, 0, 0, 0.064);
@@ -71,18 +82,25 @@ a:hover {
 .color-texto{
   color: whitesmoke;
 }
+.bg-dark-transparencia{
+  background-color: rgba(0, 0, 0, 0.395);
+}
+.bg-artista-transparencia{
+  background-color: rgba(0, 0, 0, 0.619);
+}
 .cardsEfect{
   box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
   cursor: default;
   transition:  all 400ms ease;
   /* background-color: #05a1ad ; */
-  background-color: #447390;
+  background-color: #4473905e;
 }
+
 .cardsEfect:hover{
   box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
   transform: translateY(-3%);
   /* background-color: #FF4265; */
-  background-color: #5a4c6e;
+  background-color: #5a4c6e7e;
 }
 @media all and (max-width: 576px){
   .Banner-index {
