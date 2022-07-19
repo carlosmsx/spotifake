@@ -95,7 +95,14 @@ a:hover {
   /* background-color: #05a1ad ; */
   background-color: #44739000;
 }
-
+.padding-boton{
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.padding-300{
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
 .cardsEfect:hover{
   box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
   transform: translateY(-3%);
@@ -106,5 +113,12 @@ a:hover {
   .Banner-index {
     height: 180px;
     object-fit: cover;
+  }
+  .sm-none {
+    display: none;
+  }
+  .padding-tarjetas{
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
