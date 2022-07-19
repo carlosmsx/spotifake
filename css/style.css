@@ -54,6 +54,10 @@ footer a:hover,
   color: #ff4365;
 }
 
+.navLista.active {
+  color: #05a1ad !important;
+}
+
 #imgLogo {
   object-fit: contain;
 }
@@ -68,11 +72,11 @@ footer a:hover,
   font-weight: 700;
   color: #ff4365;
 }
+
 /* estilo para recortar valore largos en las tablas */
-td p
-{
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+td p {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
