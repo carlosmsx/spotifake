@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+/* Navbar y footer*/
+
+nav .btn {
+  border: 2px solid #ff4365;
+  color: #ff4365;
+}
+
+nav .btn:hover {
+  border: 2px solid #05a1ad;
+  color: #05a1ad;
+}
+
+nav,
+.offcanvasLista,
+footer,
+#offcanvasExplorar {
+  background-color: #2e294e;
+  color: white;
+  border: 0;
+}
+
+#navDropdown {
+  background-color: #05a1ad;
+}
+
+#navDropdown a:hover {
+  background-color: #05a1ad;
+  color: #ff4365;
+}
+
+footer h5 {
+  color: white;
+  font-weight: 500;
+}
+
+.offcanvasLista a,
+footer a,
+.navLista {
+  color: white;
+  text-decoration: none;
+}
+
+.offcanvasLista a:hover,
+footer a:hover,
+.navLista:hover {
+  color: #ff4365;
+}
+
+.navLista.active {
+  color: #05a1ad !important;
+}
+
+#imgLogo {
+  object-fit: contain;
+}
+
+.offcanvasListaTitulo {
+  font-weight: 700;
+  font-size: larger;
+}
+
+#offcanvasLabel {
+  font-size: xx-large;
+  font-weight: 700;
+  color: #ff4365;
+}
+
+/* estilo para recortar valore largos en las tablas */
+td p {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
