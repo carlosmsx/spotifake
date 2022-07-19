@@ -19,6 +19,17 @@ export function cantidadCaracteres(input, min, max)
     }
     else
     {
-        input.className = 'form-contro is-invalid';
+        input.className = 'form-control is-invalid';
     }
 }
+
+export function validarUrl(input) {
+    let patron = /^(http|https|ftp)\:\/\/[a-z0-9\.-]+\.[a-z]{2,4}/gi;
+    if (patron.test(input.value.trim())) {
+      input.className = "form-control is-valid";
+      return true;
+    } else {
+      input.className = "form-control is-invalid";
+      return false;
+    }
+  }
