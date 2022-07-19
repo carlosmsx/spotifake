@@ -9,7 +9,7 @@
   color: white;
 }
 .img-principal{
-  background-image: url(https://i.pinimg.com/564x/cd/f7/22/cdf722f4d4ae217f52dea4c1e26658e2.jpg);
+  background-image: url(https://i.pinimg.com/564x/ad/f6/ae/adf6aef0785eb56ac6bbd828788bef1e.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   /* height: 2000px; */
@@ -93,14 +93,14 @@ a:hover {
   cursor: default;
   transition:  all 400ms ease;
   /* background-color: #05a1ad ; */
-  background-color: #4473905e;
+  background-color: #44739000;
 }
 
 .cardsEfect:hover{
   box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
   transform: translateY(-3%);
   /* background-color: #FF4265; */
-  background-color: #5a4c6e7e;
+  background-color: #5a4c6e6b;
 }
 @media all and (max-width: 576px){
   .Banner-index {
