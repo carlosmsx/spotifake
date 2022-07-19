@@ -147,8 +147,7 @@ window.borrarCancion = function(codigo)
             let vectorCancionesNuevo = vectorCanciones.filter((cancion)=>{ return cancion.codigo != codigo; });
             vectorCanciones = vectorCancionesNuevo;
             guardarListaCanciones();
-            borrarTabla();
-            cargaInicial();
+            actualizarTabla();
             Swal.fire(
                 'Cancion eliminada!',
                 'La cancion fue eliminada.',
