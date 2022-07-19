@@ -118,7 +118,7 @@ function crearFila(cancion)
     `<tr>
     <th scope="row">${cancion.codigo }</th>
     <td>${cancion.titulo}</td>
-    <td>${cancion.artista}</td>
+    <td><p>${cancion.artista}</p></td>
     <td>${cancion.categoria}</td>
     <td><p>${cancion.imagen}</p></td>
     <td>${cancion.duracion}</td>
