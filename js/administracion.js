@@ -97,8 +97,7 @@ function limpiarFormulario()
 
 function guardarListaCanciones()
 {
-    localStorage.setItem('vectorCancionesKey', JSON.stringify(vectorCanciones))
-    
+    localStorage.setItem('vectorCancionesKey', JSON.stringify(vectorCanciones))   
 }
 
 function cargaInicial()
