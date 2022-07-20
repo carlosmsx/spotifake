@@ -63,14 +63,13 @@ footer a:hover,
   font-size: larger;
 }
 
-<<<<<<< HEAD
 #offcanvasLabel {
   font-size: xx-large;
   font-weight: 700;
   color: #ff4365;
 }
-=======
-/* estilo para recortar valore largos en las tablas */
+
+/* estilo para recortar valores largos en las tablas */
 td p
 {
     width: 150px;
@@ -78,4 +77,3 @@ td p
     overflow: hidden;
     text-overflow: ellipsis;
 }
->>>>>>> adminEdit
