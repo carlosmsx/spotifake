@@ -92,7 +92,7 @@
     <main>
       <section >
         
-        <article class="img-principal">
+        <article class=" img-principal">
           <!-- desde aqui nico -->
           <section>
             <div
@@ -172,9 +172,9 @@
             </div>
           </section>
           <!-- tarjetas generos -->
-          <section class="container py-4 bg-dark-transparencia">
+          <section class="container-fluid py-4 bg-dark-transparencia">
             <article>
-              <h2 class="text-light py-4">Playlist recomendadas</h2>
+              <h2 class="ms-5 text-light py-4">Playlist recomendadas</h2>
             </article>
             <article class="row padding-tarjetas">
               <div class="col-12 col-md-6 col-lg-4">
@@ -465,13 +465,13 @@
               </div>
             </article>
           </section>
-          <section class="container bg-artista-transparencia py-2 my-5">
-            <article class="py-4 sm-none">
+          <section class="container-fluid bg-artista-transparencia py-2 my-5">
+            <article class="py-4">
               <h2 class="display-5 text-center py-5">Artistas</h2>
-
-              <div class="row container">
+              <article class="container sm-none">
+              <div class="row">
                 <div
-                  class="col-12 col-md-4 col-lg-3 py-3"
+                  class="col-12 col-md-4 col-lg-3 py-3 md-none"
                   data-aos="fade-right"
                 >
                   <div class="card h-100">
@@ -503,7 +503,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-12 col-md-4 col-lg-3 py-3" data-aos="fade-left">
+                <div class="col-12 col-md-4 col-lg-3 md-none py-3" data-aos="fade-left">
                   <div class="card h-100">
                     <img
                       src="img/artistas/ed sheeran.jpg"
@@ -513,6 +513,7 @@
                   </div>
                 </div>
               </div>
+            </article>
             </article>
             <article>
               <h2 class="text-center pt-5">
@@ -601,7 +602,7 @@
               </div>
             </article>
           </section>
-          <section>
+          <section class="container">
             <article class="container padding-300">
               <h2 class="text-center">Probrar spotifake ahora</h2>
               <h2 class="display-6 text-center">
@@ -613,15 +614,15 @@
                 </div>
               </div>
             </article>
-            <div class="container">
+            <!-- <article class="container">
               <img
                 src="https://www.wiseband.es/newhome/img/illustrations/coversx2160.webp"
                 height="350px"
                 alt=""
               />
-            </div>
+            </article> -->
           </section>
-          <section>
+          <section class="container">
             <article class="row py-5">
               <div class="col-12 col-md-6"></div>
               <div class="container col-12 col-md-6">
@@ -641,21 +642,8 @@
         </article>
       </section>
     </main>
-    <footer class="p-5 row d-flex justify-content-center">
-      <article class="col-1">
-        <img src="img/Logo.png" alt="" class="w-100" id="imgLogo" />
-      </article>
-      <article class="col-3 text-center">
-        <h5>Explorar</h5>
-        <ul class="list-unstyled text-center">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="pages/acercade.html">Quienes somos</a></li>
-          <li><a href="pages/administracion.html">Administracion</a></li>
-        </ul>
-      </article>
-      <article class="col-3 text-center">
-        <h5>Seguinos en las redes</h5>
-      </article>
+    <footer>
+      
     </footer>
     <!-- link de efecto imagenes -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

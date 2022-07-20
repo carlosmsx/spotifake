@@ -109,11 +109,9 @@ a:hover {
   /* background-color: #FF4265; */
   background-color: #5a4c6e6b;
 }
-@media all and (max-width: 576px){
-  .Banner-index {
-    height: 180px;
-    object-fit: cover;
-  }
+/* celulares */
+@media all and (max-width: 768px){
+
   .sm-none {
     display: none;
   }
@@ -121,4 +119,17 @@ a:hover {
     padding-left: 50px;
     padding-right: 50px;
   }
+  .Banner-index {
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+/* tablets */
+@media all and (min-width: 769px) and (max-width: 991px)
+{
+ .md-none{
+   display: none;
+ }
+
 }
