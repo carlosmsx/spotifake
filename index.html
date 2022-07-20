@@ -53,20 +53,40 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Registro</a>
+                <a
+                  class="nav-link navLista"
+                  data-bs-toggle="offcanvas"
+                  href="#offcanvasExplorar"
+                  role="button"
+                  aria-controls="offcanvasExplorar"
+                >
+                  Descubrí
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navLista" href="pages/acercade.html"
+                  >Acerca de</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navLista" href="#">Registro</a>
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle navLista"
                   href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Login
+                  Iniciar sesión
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdown"
+                  id="navDropdown"
+                >
                   <li><a class="dropdown-item" href="#">Usuario</a></li>
                   <li><a class="dropdown-item" href="#">Administrador</a></li>
                   <li><hr class="dropdown-divider" /></li>
@@ -80,19 +100,106 @@
               <input
                 class="form-control me-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Buscar canción"
                 aria-label="Search"
               />
-              <button class="btn" type="submit">Search</button>
+              <button class="btn" type="submit">Buscar</button>
             </form>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section >
-        
-        <article class=" img-principal">
+      <!-- Offcanvas -->
+      <section>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExplorar"
+          aria-labelledby="offcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title ms-4 mt-2" id="offcanvasLabel">
+              Descubrí
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              <ul class="list-group px-0">
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start offcanvasLista"
+                >
+                  <div class="ms-2 me-auto">
+                    <div>
+                      <a href="index.html" class="offcanvasListaTitulo"
+                        >Inicio</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start offcanvasLista"
+                >
+                  <div class="ms-2 me-auto">
+                    <div>
+                      <a href="#" class="offcanvasListaTitulo">Categorias</a>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><a href="">Rock</a></li>
+                      <li><a href="">Salsa</a></li>
+                      <li><a href="">Cumbia</a></li>
+                      <li><a href="">Pop</a></li>
+                      <li><a href="">Folklore</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start offcanvasLista"
+                >
+                  <div class="ms-2 me-auto">
+                    <div>
+                      <a href="#" class="offcanvasListaTitulo">Artistas</a>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><a href="">La Konga</a></li>
+                      <li><a href="">Taylor Swift</a></li>
+                      <li><a href="">Bon Jovi</a></li>
+                      <li><a href="">Coldplay</a></li>
+                      <li><a href="">Los Manseros</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start offcanvasLista"
+                >
+                  <div class="ms-2 me-auto">
+                    <div>
+                      <a href="#" class="offcanvasListaTitulo"
+                        >Listas de reproducción</a
+                      >
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><a href="">Cumbia al 100</a></li>
+                      <li><a href="">Románticos de domingo</a></li>
+                      <li><a href="">Asadito</a></li>
+                      <li><a href="">Previa 2022</a></li>
+                      <li><a href="">Mates al sol</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <article class="img-principal">
           <!-- desde aqui nico -->
           <section>
             <div
@@ -469,51 +576,57 @@
             <article class="py-4">
               <h2 class="display-5 text-center py-5">Artistas</h2>
               <article class="container sm-none">
-              <div class="row">
-                <div
-                  class="col-12 col-md-4 col-lg-3 py-3 md-none"
-                  data-aos="fade-right"
-                >
-                  <div class="card h-100">
-                    <img
-                      src="img/artistas/Dua Lipa Grammy.jpg"
-                      class="card-img-top CorregirImg"
-                      alt="..."
-                    />
+                <div class="row">
+                  <div
+                    class="col-12 col-md-4 col-lg-3 py-3 md-none"
+                    data-aos="fade-right"
+                  >
+                    <div class="card h-100">
+                      <img
+                        src="img/artistas/Dua Lipa Grammy.jpg"
+                        class="card-img-top CorregirImg"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-4 col-lg-3 py-3"
+                    data-aos="fade-right"
+                  >
+                    <div class="card h-100">
+                      <img
+                        src="img/artistas/Julian (1).jpg"
+                        class="card-img-top CorregirImg"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-4 col-lg-3 py-3"
+                    data-aos="fade-left"
+                  >
+                    <div class="card h-100">
+                      <img
+                        src="img/artistas/wos2(1).jpg"
+                        class="card-img-top CorregirImg"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-4 col-lg-3 md-none py-3"
+                    data-aos="fade-left"
+                  >
+                    <div class="card h-100">
+                      <img
+                        src="img/artistas/ed sheeran.jpg"
+                        class="card-img-top CorregirImg"
+                        alt="..."
+                      />
+                    </div>
                   </div>
                 </div>
-                <div
-                  class="col-12 col-md-4 col-lg-3 py-3"
-                  data-aos="fade-right"
-                >
-                  <div class="card h-100">
-                    <img
-                      src="img/artistas/Julian (1).jpg"
-                      class="card-img-top CorregirImg"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 py-3" data-aos="fade-left">
-                  <div class="card h-100">
-                    <img
-                      src="img/artistas/wos2(1).jpg"
-                      class="card-img-top CorregirImg"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 md-none py-3" data-aos="fade-left">
-                  <div class="card h-100">
-                    <img
-                      src="img/artistas/ed sheeran.jpg"
-                      class="card-img-top CorregirImg"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-              </div>
-            </article>
+              </article>
             </article>
             <article>
               <h2 class="text-center pt-5">
@@ -642,9 +755,7 @@
         </article>
       </section>
     </main>
-    <footer>
-      
-    </footer>
+    <footer></footer>
     <!-- link de efecto imagenes -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
