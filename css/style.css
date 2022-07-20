@@ -86,7 +86,7 @@ footer a:hover,
 
 .Banner-index {
   width: 100%;
-  height: 270px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -98,8 +98,12 @@ footer a:hover,
   background-color: #05a2ad;
 }
 .padding-tarjetas {
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+.py-20{
+  padding-left: 200px;
+  padding-right: 200px;
 }
 .bg-fila-canciones {
   background: rgba(0, 0, 0, 0.064);
@@ -125,8 +129,8 @@ footer a:hover,
   padding-right: 150px;
 }
 .padding-300 {
-  padding-top: 180px;
-  padding-bottom: 180px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 .cardsEfect:hover {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
@@ -134,7 +138,12 @@ footer a:hover,
   /* background-color: #FF4265; */
   background-color: #5a4c6e6b;
 }
-
+.botonSuscribete{
+  background-color: #1c1836;
+}
+.botonSuscribete:hover{
+  background-color: #312d4f;
+}
 /* Celulares */
 @media all and (max-width: 768px) {
   .sm-none {
@@ -143,6 +152,10 @@ footer a:hover,
   .padding-tarjetas {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .padding-boton {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .Banner-index {
     height: 180px;
