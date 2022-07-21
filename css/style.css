@@ -8,7 +8,7 @@
 
 /* Navbar y footer*/
 
-nav .btn {
+nav .btn{
   border: 2px solid #ff4365;
   color: #ff4365;
 }
@@ -211,4 +211,26 @@ td p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Registro */
+
+#mainRegistro{
+  background-color: #006d77;
+}
+
+#btnRegistrarme{
+  border: 2px solid #ff4365;
+  background-color: #2e294e;
+  color: #ff4365;
+}
+
+#btnRegistrarme:hover{
+  border: 2px solid #2e294e;
+  background-color: #ff4365;
+  color: #2e294e;
+}
+
+.formRegistro option{
+  color: black ;
 }
