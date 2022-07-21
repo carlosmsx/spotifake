@@ -80,7 +80,8 @@ footer a:hover,
 /* Pagina principal */
 
 .img-principal {
-  background-image: url(https://i.pinimg.com/564x/ad/f6/ae/adf6aef0785eb56ac6bbd828788bef1e.jpg);
+  background-image: url(../img/fondoPrincipal/imagen4.jpg);
+  /* https://i.pinimg.com/564x/ad/f6/ae/adf6aef0785eb56ac6bbd828788bef1e.jpg */
   background-repeat: no-repeat;
   background-position: center center;
   /* height: 2000px; */
