@@ -183,7 +183,10 @@ a:link, a:visited, a:active {
     padding-left: 5px;
   }
 }
-
+/* clase para filtrar canciones */
+.filtro{
+  display: none;
+}
 /* Tablets */
 @media all and (min-width: 767px) and (max-width: 991px) {
   .md-none {
