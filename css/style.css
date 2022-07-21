@@ -205,3 +205,10 @@ a:link, a:visited, a:active {
     padding-left: 60px;
   }
 }
+/* estilo para recortar valore largos en las tablas */
+td p {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,17 +1,232 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyecto final modulo 2. Comision 2i">
-    <meta name="author" content="Otto Krautmann, Vale Ormaechea, Nicolas Andrade, Carlos Escobar">
-    <meta name="keywords" content="javascript html proyecto final c2i rollingcode musica spotifake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto final modulo 2. Comision 2i" />
+    <meta
+      name="author"
+      content="Otto Krautmann, Vale Ormaechea, Nicolas Andrade, Carlos Escobar"
+    />
+    <meta
+      name="keywords"
+      content="javascript html proyecto final c2i rollingcode musica spotifake"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Error 404</title>
-</head>
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-</body>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="../img/Logo.png"
+              alt="Logo Spotifake"
+              id="imgLogo"
+              width="60"
+              height="48"
+              class="ms-5"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link navLista"
+                  data-bs-toggle="offcanvas"
+                  href="#offcanvasExplorar"
+                  role="button"
+                  aria-controls="offcanvasExplorar"
+                >
+                  Descubrí
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navLista" href="acercade.html">Acerca de</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navLista" href="#">Registro</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle navLista"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Iniciar sesión
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdown"
+                  id="navDropdown"
+                >
+                  <li><a class="dropdown-item" href="#">Usuario</a></li>
+                  <li><a class="dropdown-item" href="#">Administrador</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar canción"
+                aria-label="Search"
+              />
+              <button class="btn" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExplorar"
+          aria-labelledby="offcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title ms-4 mt-2" id="offcanvasLabel">
+              Descubrí
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              <ul class="list-group px-0">
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start offcanvasLista"
+                >
+                  <div class="ms-2 me-auto">
+                    <div>
+                      <a href="../index.html" class="offcanvasListaTitulo"
+                        >Inicio</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start offcanvasLista"
+                >
+                  <div class="ms-2 me-auto">
+                    <div>
+                      <a href="#" class="offcanvasListaTitulo">Categorias</a>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><a href="">Rock</a></li>
+                      <li><a href="">Salsa</a></li>
+                      <li><a href="">Cumbia</a></li>
+                      <li><a href="">Pop</a></li>
+                      <li><a href="">Folklore</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start offcanvasLista"
+                >
+                  <div class="ms-2 me-auto">
+                    <div>
+                      <a href="#" class="offcanvasListaTitulo">Artistas</a>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><a href="">La Konga</a></li>
+                      <li><a href="">Taylor Swift</a></li>
+                      <li><a href="">Bon Jovi</a></li>
+                      <li><a href="">Coldplay</a></li>
+                      <li><a href="">Los Manseros</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-start offcanvasLista"
+                >
+                  <div class="ms-2 me-auto">
+                    <div>
+                      <a href="#" class="offcanvasListaTitulo"
+                        >Listas de reproducción</a
+                      >
+                    </div>
+                    <ul class="list-unstyled">
+                      <li><a href="">Cumbia al 100</a></li>
+                      <li><a href="">Románticos de domingo</a></li>
+                      <li><a href="">Asadito</a></li>
+                      <li><a href="">Previa 2022</a></li>
+                      <li><a href="">Mates al sol</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <img src="../img/error404.jpg" class="w-100" alt="Error 404" />
+      </section>
+    </main>
+    <footer>
+      <section class="p-5 mx-0 row d-flex justify-content-center w-100">
+        <article class="col-3 col-md-1">
+          <img src="../img/Logo.png" alt="" class="w-100" id="imgLogo" />
+        </article>
+        <article class="col-12 col-md-3 my-4 my-md-0 text-center">
+          <h5>Explorar</h5>
+          <ul class="list-unstyled text-center my-0">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="acercade.html">Quienes somos</a></li>
+            <li><a href="administracion.html">Administracion</a></li>
+          </ul>
+        </article>
+        <article class="col-12 col-md-3 text-center">
+          <h5>Seguinos en las redes</h5>
+          <div>
+            <a href="#"><i class="bi bi-facebook fs-4"></i> </a
+            ><a href="#"><i class="bi bi-twitter fs-4 mx-3"></i></a
+            ><a href="#"><i class="bi bi-instagram fs-4"></i></a>
+          </div>
+        </article>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
