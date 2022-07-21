@@ -1,5 +1,5 @@
 import {Cancion} from './cancionClass.js';
-import { campoRequerido, cantidadCaracteres } from "./validaciones.js";
+import { campoRequerido, cantidadCaracteres, validarUrl } from "./validaciones.js";
 import { getUniqueId } from './guid.js';
 
 //si hay algo en localstorage traer los datos, si no crear el arreglo vacio
@@ -15,21 +15,20 @@ let imagen = document.getElementById("imagen")
 let duracion = document.getElementById("duracion")
 let cancion = document.getElementById("cancion")
 
-//ya fueron chequeados todos uno por uno... console.log(codigo)
-
+let editando = false; 
 let formulario = document.getElementById("formCancion")
 const modalAdminCancion = new bootstrap.Modal(document.getElementById("modalCancion"))
 let btnCrearCancion = document.getElementById("btnCrearCancion")
 let tablaCanciones = document.getElementById("tablaCanciones")
 
 btnCrearCancion.addEventListener("click", ()=>{
-    limpiarFormulario()
-    //asignar codigo unico 
+    limpiarFormulario();
     codigo.value = getUniqueId();
-    modalAdminCancion.show()
+    editando = false;
+    modalAdminCancion.show();
 })
 
-//validaciones
+//eventos de validaciones
 codigo.addEventListener("blur", ()=>{ campoRequerido(codigo); });
 codigo.addEventListener("keyDown", ()=>{ cantidadCaracteres(codigo, 1, 5); });
 
@@ -41,19 +40,38 @@ artista.addEventListener("keyDown", ()=>{ cantidadCaracteres(artista, 2, 200); }
 
 imagen.addEventListener("blur", ()=>{ campoRequerido(imagen); });
 imagen.addEventListener("keyDown", ()=>{ cantidadCaracteres(imagen, 2, 120); });
+imagen.addEventListener("blur", ()=>{ validarUrl(imagen); });
 
 categoria.addEventListener("blur", ()=>{ campoRequerido(categoria); });
 categoria.addEventListener("change", ()=>{ campoRequerido(categoria, 2, 200); });
 
+duracion.addEventListener("blur", ()=>{ campoRequerido(duracion); });
+duracion.addEventListener("change", ()=>{ campoRequerido(duracion, 2, 200); });
 
-formulario.addEventListener('submit', crearCancion)
+cancion.addEventListener("blur", ()=>{ campoRequerido(cancion); });
+cancion.addEventListener("change", ()=>{ campoRequerido(cancion, 2, 200); });
+cancion.addEventListener("blur", ()=>{ validarUrl(cancion); });
+
+formulario.addEventListener('submit', guardarCancion)
 
 cargaInicial()
 
-function crearCancion(e)
+function guardarCancion(e)
 {
     e.preventDefault();
     //TODO: volver a validar todos los campos
+    if (editando)
+    {
+        guardarEdicionCancion();
+    }
+    else
+    {
+        crearCancion();
+    }
+}
+
+function crearCancion()
+{
     let nuevaCancion = new Cancion(codigo.value, titulo.value, artista.value, categoria.value, imagen.value, duracion.value, cancion.value);
     vectorCanciones.push(nuevaCancion);
     //limpiar el formulario
@@ -81,8 +99,7 @@ function limpiarFormulario()
 
 function guardarListaCanciones()
 {
-    localStorage.setItem('vectorCancionesKey', JSON.stringify(vectorCanciones))
-    
+    localStorage.setItem('vectorCancionesKey', JSON.stringify(vectorCanciones))   
 }
 
 function cargaInicial()
@@ -101,13 +118,13 @@ function crearFila(cancion)
     `<tr>
     <th scope="row">${cancion.codigo }</th>
     <td>${cancion.titulo}</td>
-    <td>${cancion.artista}</td>
+    <td><p>${cancion.artista}</p></td>
     <td>${cancion.categoria}</td>
-    <td>${cancion.imagen}</td>
+    <td><p>${cancion.imagen}</p></td>
     <td>${cancion.duracion}</td>
-    <td>${cancion.cancion}</td>
-    <td class="d-flex">
-        <button class="btn btn-sm btn-warning me-1"><i class="bi bi-pencil-square"></i></button>
+    <td><p>${cancion.cancion}</p></td>
+    <td>
+        <button class="btn btn-sm btn-warning me-1" onclick="modificarCancion('${cancion.codigo}')"><i class="bi bi-pencil-square"></i></button>
         <button class="btn btn-sm btn-danger" onclick="borrarCancion('${cancion.codigo}')"><i class="bi bi-x-square"></i></button>
     </td>
     </tr>`
@@ -131,8 +148,7 @@ window.borrarCancion = function(codigo)
             let vectorCancionesNuevo = vectorCanciones.filter((cancion)=>{ return cancion.codigo != codigo; });
             vectorCanciones = vectorCancionesNuevo;
             guardarListaCanciones();
-            borrarTabla();
-            cargaInicial();
+            actualizarTabla();
             Swal.fire(
                 'Cancion eliminada!',
                 'La cancion fue eliminada.',
@@ -142,7 +158,44 @@ window.borrarCancion = function(codigo)
     })
 }
 
-function borrarTabla()
+function actualizarTabla()
 {
     tablaCanciones.innerHTML = "";
+    cargaInicial();
+}
+
+window.modificarCancion = (codigoCancion)=>
+{
+    let cancionEditada = vectorCanciones.find((cancion)=>{ return cancion.codigo == codigoCancion; });
+
+    codigo.value = cancionEditada.codigo;
+    titulo.value = cancionEditada.titulo;
+    artista.value = cancionEditada.artista;
+    categoria.value = cancionEditada.categoria;
+    imagen.value = cancionEditada.imagen;
+    duracion.value = cancionEditada.duracion;
+    cancion.value = cancionEditada.cancion;
+
+    editando = true;
+    modalAdminCancion.show();
+}
+
+function guardarEdicionCancion()
+{
+    let index = vectorCanciones.findIndex((cancion)=>{return cancion.codigo == codigo.value; });
+    //actualizar elemento del vector
+    vectorCanciones[index].titulo = titulo.value;
+    vectorCanciones[index].artista = artista.value;
+    vectorCanciones[index].categoria = categoria.value;
+    vectorCanciones[index].imagen = imagen.value;
+    vectorCanciones[index].duracion = duracion.value;
+    vectorCanciones[index].cancion = cancion.value;
+    //guardar en localstorage
+    guardarListaCanciones();
+    //actualizar la tabla
+    actualizarTabla();
+    //indicar al usuario
+    Swal.fire('Cancion actualizada', 'La cancion fue actualizada correctamente', 'success')
+    //cerrar ventana modal
+    modalAdminCancion.hide();
 }
