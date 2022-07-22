@@ -77,6 +77,11 @@ footer a:hover,
   color: #ff4365;
 }
 
+/* Main ADN*/
+
+.fondoCeleste {
+  background-color: #006d77;
+}
 /* Pagina principal */
 
 .img-principal {
@@ -102,14 +107,14 @@ footer a:hover,
 .color-tarjeta {
   background-color: #05a2ad;
 }
-.color-tarjeta:hover{
+.color-tarjeta:hover {
   background-color: #39c1ca;
 }
 .padding-tarjetas {
   padding-left: 180px;
   padding-right: 180px;
 }
-.py-20{
+.py-20 {
   padding-left: 200px;
   padding-right: 200px;
 }
@@ -140,7 +145,7 @@ footer a:hover,
   padding-top: 150px;
   padding-bottom: 150px;
 }
-.mss-5{
+.mss-5 {
   padding-left: 100px;
 }
 .cardsEfect:hover {
@@ -149,14 +154,16 @@ footer a:hover,
   /* background-color: #FF4265; */
   background-color: #5a4c6e6b;
 }
-.botonSuscribete{
+.botonSuscribete {
   background-color: #1c1836;
 }
-.botonSuscribete:hover{
+.botonSuscribete:hover {
   background-color: #312d4f;
 }
-a:link, a:visited, a:active {
-  text-decoration:none;
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 /* Celulares */
 @media all and (max-width: 760px) {
@@ -175,11 +182,11 @@ a:link, a:visited, a:active {
     height: 130px;
     object-fit: cover;
   }
-  .py-20{
+  .py-20 {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .mss-5{
+  .mss-5 {
     padding-left: 5px;
   }
 }
@@ -196,7 +203,7 @@ a:link, a:visited, a:active {
     height: 240px;
     object-fit: cover;
   }
-  .py-20{
+  .py-20 {
     padding-left: 100px;
     padding-right: 100px;
   }
@@ -204,7 +211,7 @@ a:link, a:visited, a:active {
     padding-left: 80px;
     padding-right: 80px;
   }
-  .mss-5{
+  .mss-5 {
     padding-left: 60px;
   }
 }
@@ -214,4 +221,50 @@ td p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Registro */
+
+#mainRegistro {
+  background-color: #006d77;
+}
+
+#btnRegistrarme {
+  border: 2px solid #ff4365;
+  background-color: #2e294e;
+  color: #ff4365;
+}
+
+#btnRegistrarme:hover {
+  border: 2px solid #2e294e;
+  background-color: #ff4365;
+  color: #2e294e;
+}
+
+.formRegistro option {
+  color: black;
+}
+
+/* Error 404 */
+
+#mainError {
+  background-color: #ff5555;
+}
+
+/* Acerca de nosotros */
+
+.imgNosotros {
+  object-fit: cover;
+  box-shadow: 2px 2px 100px 2px #2e294e;
+  border-radius: 3px;
+}
+
+.imgNosotros:hover {
+  filter: grayscale(80%);
+}
+
+.divNosotros:hover {
+  position: relative;
+  bottom: 5px;
+  right: 2px;
 }
