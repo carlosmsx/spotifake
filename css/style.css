@@ -304,9 +304,23 @@ a:active {
   color: #4e031e ;
 }
 
+#btnAdminEnviar {
+  border: 2px solid #ff4365;
+  background-color: #2e294e;
+  color: #ff4365;
+}
+
+#btnAdminEnviar:hover {
+  border: 2px solid #2e294e;
+  background-color: #ff4365;
+  color: #2e294e;
+}
+
 #adminFormClose {
   background-color: #a6a1f0;
 }
+
+
 
 /* estilo para recortar valores largos en las tabla administracion */
 .adminTrim {
