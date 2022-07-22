@@ -14,92 +14,124 @@
         <title>Administracion de canciones</title>
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                  <img
-                    src="../img/Logo.png"
-                    alt="Logo Spotifake"
-                    id="imgLogo"
-                    width="60"
-                    height="48"
-                    class="ms-5"
-                  />
-                </a>
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Registro</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarDropdown"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="../img/Logo.png"
+                alt="Logo Spotifake"
+                id="imgLogo"
+                width="60"
+                height="48"
+                class="ms-5"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link navLista" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link navLista"
+                    data-bs-toggle="offcanvas"
+                    href="#offcanvasExplorar"
+                    role="button"
+                    aria-controls="offcanvasExplorar"
+                  >
+                    Descubrí
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link navLista" href="acercade.html">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link navLista"
+                    href="registro.html"
+                    >Registro</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle navLista"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Iniciar sesión
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                    id="navDropdown"
+                  >
+                    <li><a class="dropdown-item" href="#">Usuario</a></li>
+                    <li>
+                      <a class="dropdown-item" href="administracion.html"
+                        >Administrador</a
                       >
-                        Login
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Usuario</a></li>
-                        <li><a class="dropdown-item" href="#">Administrador</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Cerrar sesión</a>
-                        </li>
-                      </ul>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="error404.html"
+                        >Cerrar sesión</a
+                      >
                     </li>
                   </ul>
-                  <form class="d-flex" role="search">
-                    <input
-                      class="form-control me-2"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    />
-                    <button class="btn" type="submit">Search</button>
-                  </form>
-                </div>
-              </div>
-            </nav>
-          </header>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Buscar canción"
+                  aria-label="Search"
+                />
+                <button class="btn" type="submit">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
       
-        <main class="container-fluid py-5 bg-black">
-            <h1 class="display-4 text-center">Administrador de canciones</h1>
+      <main>
+        <section class="adminFondo p-5 text-center">
+            <h1>Administrador de canciones</h1>
             <hr />
             <section class="mt-5">
                 <div class="d-flex">
                     <h4>Canciones disponibles</h4>
-                    <button id="btnCrearCancion" class="btn btn-sm btn-primary btn-sm ms-3">
+                    <button id="btnCrearCancion" class="btn ms-3">
                         <i class="bi bi-plus-square me-2"></i>Agregar
                     </button>
                 </div>
                 <hr />
                 <article class="table-responsive">
-                    <table class="table">
+                    <table class="table text-start adminBorder">
                         <thead>
                             <tr>
-                                <th scope="col">C&oacute;digo</th>
-                                <th scope="col">T&iacute;tulo</th>
-                                <th scope="col">Artista o grupo</th>
-                                <th scope="col">Categor&iacute;a</th>
-                                <th scope="col">Im&aacute;gen</th>
-                                <th scope="col">Duraci&oacute;n</th>
-                                <th scope="col">Canci&oacute;n</th>
+                                <!-- <th scope="col">Código</th> -->
+                                <th scope="col">Título</th>
+                                <th scope="col">Artista</th>
+                                <th scope="col">Categoría</th>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Duración</th>
+                                <th scope="col">Canción</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -108,20 +140,21 @@
                     </table>
                 </article>
             </section>
+          </section> 
         </main>
 
         <!-- modal para administrar canciones -->
         <div class="modal fade" id="modalCancion" tabindex="-1">
             <div class="modal-dialog">
-                <div class="modal-content bg-black border-light">
+                <div class="modal-content adminFondo adminBorder">
                     <div class="modal-header">
-                        <h5 class="modal-title">Nueva canci&oacute;n</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title">Nueva canción</h5>
+                        <button id="adminFormClose" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form id="formCancion">
                             <div class="mb-3">
-                                <label for="codigo">C&oacute;digo</label>
+                                <label for="codigo">Código</label>
                                 <input
                                     id="codigo"
                                     type="text"
@@ -133,7 +166,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="titulo">T&iacute;tulo</label>
+                                <label for="titulo">Título</label>
                                 <input
                                     id="titulo"
                                     type="text"
@@ -145,7 +178,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="artista">Artista o grupo</label>
+                                <label for="artista">Artista</label>
                                 <input
                                     id="artista"
                                     type="text"
@@ -157,9 +190,9 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="categoria">Categor&iacute;a</label>
+                                <label for="categoria">Categoría</label>
                                 <select id="categoria" class="form-control" required>
-                                    <option value="">Seleccione una opcion</option>
+                                    <option value="">Seleccione una opción</option>
                                     <option value="rock">Rock</option>
                                     <option value="salsa">Salsa</option>
                                     <option value="cumbia">Cumbia</option>
@@ -180,7 +213,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="duracion">Duraci&oacute;n</label>
+                                <label for="duracion">Duración</label>
                                 <input
                                     id="duracion"
                                     type="text"
@@ -192,7 +225,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="cancion">Canci&oacute;n</label>
+                                <label for="cancion">Canción</label>
                                 <input
                                     id="cancion"
                                     type="text"
@@ -203,28 +236,42 @@
                                     required
                                 />
                             </div>
-                            <button class="btn btn-primary">Enviar</button>
+                            <button id="botonEnviar" class="btn">Enviar</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="p-5 row d-flex justify-content-center">
-            <article class="col-1">
-              <img src="../img/Logo.png" alt="" class="w-100" id="imgLogo" />
+        <footer>
+          <section class="p-5 mx-0 row d-flex justify-content-center w-100">
+            <article class="col-12 col-md-3 text-center">
+              <a href="../index.html"
+                ><img
+                  src="../img/Logo.png"
+                  alt="Logo Spotifake"
+                  class="w-50"
+                  id="imgLogo"
+              /></a>
             </article>
-            <article class="col-3 text-center">
+            <article class="col-12 col-md-3 my-4 my-md-0 text-center">
               <h5>Explorar</h5>
-              <ul class="list-unstyled text-center">
+              <ul class="list-unstyled text-center my-0">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="acercade.html">Quienes somos</a></li>
                 <li><a href="administracion.html">Administracion</a></li>
+                <li><a href="pregistro.html">Registro</a></li>
               </ul>
             </article>
-            <article class="col-3 text-center">
+            <article class="col-12 col-md-3 text-center">
               <h5>Seguinos en las redes</h5>
+              <div>
+                <a href="error404.html"><i class="bi bi-facebook fs-4"></i> </a
+                ><a href="error404.html"><i class="bi bi-twitter fs-4 mx-3"></i></a
+                ><a href="error404.html"><i class="bi bi-instagram fs-4"></i></a>
+              </div>
             </article>
-          </footer>
+          </section>
+        </footer>
               <script src="../js/bootstrap.min.js"></script>
         <script src="../js/administracion.js" type="module"></script>
     </body>

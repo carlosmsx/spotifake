@@ -1,5 +1,5 @@
 import {Cancion} from './cancionClass.js';
-import { campoRequerido, cantidadCaracteres } from "./validaciones.js";
+import { campoRequerido, cantidadCaracteres, validarUrl } from "./validaciones.js";
 import { getUniqueId } from './guid.js';
 
 //si hay algo en localstorage traer los datos, si no crear el arreglo vacio
@@ -40,6 +40,7 @@ artista.addEventListener("keyDown", ()=>{ cantidadCaracteres(artista, 2, 200); }
 
 imagen.addEventListener("blur", ()=>{ campoRequerido(imagen); });
 imagen.addEventListener("keyDown", ()=>{ cantidadCaracteres(imagen, 2, 120); });
+imagen.addEventListener("blur", ()=>{ validarUrl(imagen); });
 
 categoria.addEventListener("blur", ()=>{ campoRequerido(categoria); });
 categoria.addEventListener("change", ()=>{ campoRequerido(categoria, 2, 200); });
@@ -49,6 +50,7 @@ duracion.addEventListener("change", ()=>{ campoRequerido(duracion, 2, 200); });
 
 cancion.addEventListener("blur", ()=>{ campoRequerido(cancion); });
 cancion.addEventListener("change", ()=>{ campoRequerido(cancion, 2, 200); });
+cancion.addEventListener("blur", ()=>{ validarUrl(cancion); });
 
 formulario.addEventListener('submit', guardarCancion)
 
@@ -97,8 +99,7 @@ function limpiarFormulario()
 
 function guardarListaCanciones()
 {
-    localStorage.setItem('vectorCancionesKey', JSON.stringify(vectorCanciones))
-    
+    localStorage.setItem('vectorCancionesKey', JSON.stringify(vectorCanciones))   
 }
 
 function cargaInicial()
@@ -115,16 +116,16 @@ function crearFila(cancion)
 {
     let newRow = 
     `<tr>
-    <th scope="row">${cancion.codigo }</th>
+    <!--th scope="row">${cancion.codigo }</!--th-->
     <td>${cancion.titulo}</td>
-    <td>${cancion.artista}</td>
+    <td><p class="adminTrim">${cancion.artista}</p></td>
     <td>${cancion.categoria}</td>
-    <td><p>${cancion.imagen}</p></td>
+    <td><p class="adminTrim">${cancion.imagen}</p></td>
     <td>${cancion.duracion}</td>
-    <td><p>${cancion.cancion}</p></td>
+    <td><p class="adminTrim">${cancion.cancion}</p></td>
     <td>
-        <button class="btn btn-sm btn-warning me-1" onclick="modificarCancion('${cancion.codigo}')"><i class="bi bi-pencil-square"></i></button>
-        <button class="btn btn-sm btn-danger" onclick="borrarCancion('${cancion.codigo}')"><i class="bi bi-x-square"></i></button>
+        <button class="btn btnEditar" onclick="modificarCancion('${cancion.codigo}')"><i class="bi bi-pencil-square"></i></button>
+        <button class="btn btnBorrar" onclick="borrarCancion('${cancion.codigo}')"><i class="bi bi-x-square"></i></button>
     </td>
     </tr>`
 
@@ -147,8 +148,7 @@ window.borrarCancion = function(codigo)
             let vectorCancionesNuevo = vectorCanciones.filter((cancion)=>{ return cancion.codigo != codigo; });
             vectorCanciones = vectorCancionesNuevo;
             guardarListaCanciones();
-            borrarTabla();
-            cargaInicial();
+            actualizarTabla();
             Swal.fire(
                 'Cancion eliminada!',
                 'La cancion fue eliminada.',
