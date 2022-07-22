@@ -116,16 +116,16 @@ function crearFila(cancion)
 {
     let newRow = 
     `<tr>
-    <th scope="row">${cancion.codigo }</th>
+    <!--th scope="row">${cancion.codigo }</!--th-->
     <td>${cancion.titulo}</td>
-    <td><p>${cancion.artista}</p></td>
+    <td><p class="adminTrim">${cancion.artista}</p></td>
     <td>${cancion.categoria}</td>
-    <td><p>${cancion.imagen}</p></td>
+    <td><p class="adminTrim">${cancion.imagen}</p></td>
     <td>${cancion.duracion}</td>
-    <td><p>${cancion.cancion}</p></td>
+    <td><p class="adminTrim">${cancion.cancion}</p></td>
     <td>
-        <button class="btn btn-sm btn-warning me-1" onclick="modificarCancion('${cancion.codigo}')"><i class="bi bi-pencil-square"></i></button>
-        <button class="btn btn-sm btn-danger" onclick="borrarCancion('${cancion.codigo}')"><i class="bi bi-x-square"></i></button>
+        <button class="btn btnEditar" onclick="modificarCancion('${cancion.codigo}')"><i class="bi bi-pencil-square"></i></button>
+        <button class="btn btnBorrar" onclick="borrarCancion('${cancion.codigo}')"><i class="bi bi-x-square"></i></button>
     </td>
     </tr>`
 

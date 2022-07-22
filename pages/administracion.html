@@ -109,28 +109,29 @@
         </nav>
       </header>
       
-        <main class="container-fluid py-5 bg-black">
-            <h1 class="display-4 text-center">Administrador de canciones</h1>
+      <main>
+        <section class="adminFondo p-5 text-center">
+            <h1>Administrador de canciones</h1>
             <hr />
             <section class="mt-5">
                 <div class="d-flex">
                     <h4>Canciones disponibles</h4>
-                    <button id="btnCrearCancion" class="btn btn-sm btn-primary btn-sm ms-3">
+                    <button id="btnCrearCancion" class="btn ms-3">
                         <i class="bi bi-plus-square me-2"></i>Agregar
                     </button>
                 </div>
                 <hr />
                 <article class="table-responsive">
-                    <table class="table">
+                    <table class="table text-start adminBorder">
                         <thead>
                             <tr>
-                                <th scope="col">C&oacute;digo</th>
-                                <th scope="col">T&iacute;tulo</th>
+                                <!-- <th scope="col">Código</th> -->
+                                <th scope="col">Título</th>
                                 <th scope="col">Artista</th>
-                                <th scope="col">Categor&iacute;a</th>
-                                <th scope="col">Im&aacute;gen</th>
-                                <th scope="col">Duraci&oacute;n</th>
-                                <th scope="col">Canci&oacute;n</th>
+                                <th scope="col">Categoría</th>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Duración</th>
+                                <th scope="col">Canción</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -139,20 +140,21 @@
                     </table>
                 </article>
             </section>
+          </section> 
         </main>
 
         <!-- modal para administrar canciones -->
         <div class="modal fade" id="modalCancion" tabindex="-1">
             <div class="modal-dialog">
-                <div class="modal-content bg-black border-light">
+                <div class="modal-content adminFondo border-light">
                     <div class="modal-header">
-                        <h5 class="modal-title">Nueva canci&oacute;n</h5>
+                        <h5 class="modal-title">Nueva canción</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form id="formCancion">
                             <div class="mb-3">
-                                <label for="codigo">C&oacute;digo</label>
+                                <label for="codigo">Código</label>
                                 <input
                                     id="codigo"
                                     type="text"
@@ -164,7 +166,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="titulo">T&iacute;tulo</label>
+                                <label for="titulo">Título</label>
                                 <input
                                     id="titulo"
                                     type="text"
@@ -188,9 +190,9 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="categoria">Categor&iacute;a</label>
+                                <label for="categoria">Categoría</label>
                                 <select id="categoria" class="form-control" required>
-                                    <option value="">Seleccione una opcion</option>
+                                    <option value="">Seleccione una opción</option>
                                     <option value="rock">Rock</option>
                                     <option value="salsa">Salsa</option>
                                     <option value="cumbia">Cumbia</option>
@@ -211,7 +213,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="duracion">Duraci&oacute;n</label>
+                                <label for="duracion">Duración</label>
                                 <input
                                     id="duracion"
                                     type="text"
@@ -223,7 +225,7 @@
                                 />
                             </div>
                             <div class="mb-3">
-                                <label for="cancion">Canci&oacute;n</label>
+                                <label for="cancion">Canción</label>
                                 <input
                                     id="cancion"
                                     type="text"
