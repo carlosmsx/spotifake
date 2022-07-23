@@ -1,6 +1,8 @@
+import {login} from "./login.js"
 let listaCanciones =
   JSON.parse(localStorage.getItem("vectorCancionesKey")) || [];
 cargaTarjetas();
+const formLogin = document.getElementById("formLogin")
 // Si hay datos dibujar las cards
 
 function cargaTarjetas() {
@@ -32,3 +34,5 @@ window.verDetalle = (codigo) => {
   window.location.href =
     window.location.origin + `/pages/detalle.html?codigo=${codigo}`;
 };
+
+formLogin.addEventListener("submit", login);
