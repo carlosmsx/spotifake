@@ -215,13 +215,6 @@ a:active {
     padding-left: 60px;
   }
 }
-/* estilo para recortar valore largos en las tablas */
-td p {
-  width: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 /* Registro */
 
@@ -267,4 +260,75 @@ td p {
   position: relative;
   bottom: 5px;
   right: 2px;
+}
+
+/* Administracion */
+.adminFondo {
+  background-color: #5d2d4e ;
+}
+
+.adminBorder {
+  border-color: #a6a1f0;
+}
+
+#btnCrearCancion {
+  border: 2px solid #4bc6b9;
+  background-color: #4e031e  ;
+  color: #4bc6b9;
+}
+
+#btnCrearCancion:hover {
+  border: 2px solid #4e031e  ;
+  background-color: #4bc6b9;
+  color: #4e031e  ;
+}
+
+.btnEditar {
+  border: 2px solid #ffbe47;
+  background-color: #4e031e ;
+  color: #ffbe47;
+}
+
+.btnEditar:hover {
+  border: 2px solid #4e031e ;
+  background-color: #ffbe47;
+  color: #4e031e ;
+}
+
+.btnBorrar {
+  border: 2px solid #ff4365;
+  background-color: #4e031e ;
+  color: #ff4365;
+}
+
+.btnBorrar:hover {
+  border: 2px solid #4e031e ;
+  background-color: #ff4365;
+  color: #4e031e ;
+}
+
+#btnAdminEnviar {
+  border: 2px solid #ff4365;
+  background-color: #2e294e;
+  color: #ff4365;
+}
+
+#btnAdminEnviar:hover {
+  border: 2px solid #2e294e;
+  background-color: #ff4365;
+  color: #2e294e;
+}
+
+#adminFormClose {
+  background-color: #a6a1f0;
+}
+
+
+
+/* estilo para recortar valores largos en las tabla administracion */
+.adminTrim {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
