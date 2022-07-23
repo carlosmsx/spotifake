@@ -338,6 +338,20 @@ a:active {
   background-color: #006d77;
 }
 
+#breadcrumb li{
+  font-weight: 400;
+  color: #2e294e;
+}
+
+#breadcrumb a{
+  color: white;
+  font-weight: 400;
+}
+
+#breadcrumb a:hover{
+  color: #ff4365;
+}
+
 .tarjetaDetalle {
   max-height: 300px;
   overflow: hidden;
