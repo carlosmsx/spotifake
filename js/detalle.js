@@ -19,14 +19,14 @@ detalleCancion.innerHTML = `
           </ol>
         </nav>
         <article class="row bg-dark tarjetaDetalle rounded-3">
-          <div class="col-4 p-0">
+          <div class="col-12 col-md-4 p-0">
             <img
               src="${cancionBuscada.imagen}"
               alt=""
               class="imgDetalle"
             />
           </div>
-          <div class="col-8 my-3">
+          <div class="col-12 col-md-8 my-3">
             <div>
               <span class="badge bg-secondary">ID ${cancionBuscada.codigo}</span>
               <h3 class="my-2">${cancionBuscada.titulo}</h3>
