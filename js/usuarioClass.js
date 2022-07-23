@@ -12,6 +12,7 @@ export class Usuario
         this.pais = pais;
         this.CP = CP;
         this.password = password;
+        this.canciones = [];
     }
     
     /****** propiedades *******/
@@ -26,8 +27,8 @@ export class Usuario
     get getPais() { return this.pais; }
     get getCP() { return this.CP; }
     get getPassword() { return this.password; }
+    get getCanciones() { return this.canciones; }
     //setters
-    set setCodigo(value) { this.codigo = value; }
     set setNombre(value) { this.nombre = value; }
     set setEmail(value) { this.email = value; }
     set setFechaNac(value) { this.fechaNac = value; }
@@ -38,4 +39,5 @@ export class Usuario
     set setPais(value) { this.pais = value; }
     set setCP(value) { this.CP = value; }
     set setPassword(value) { this.password = value; }
+    set setCanciones(value) { this.canciones = value; }
 }
