@@ -13,19 +13,47 @@ export function campoRequerido(input)
 export function cantidadCaracteres(input, min, max)
 {
     let text = input.value.trim();
+
     if (text.length >= min && text.length <= max )
     {
-        input.className = ' form-control is-valid';
+        input.className = 'form-control is-valid';
         console.log('validado');
+        console.log(input.value);
     }
     else
     {
-        input.className = ' form-control is-invalid';
+        input.className = 'form-control is-invalid';
         console.log('no validado');
+        console.log(input.value);
     }
 }
+export function validarSoloLetras(input,min,max){
+    let patron = /^[A-Z]+$/i;
+    let text = input.value.trim();
+
+    if (text.length >= min && text.length <= max ){
+   
+        if (patron.test(input.value.trim()))
+        {
+            input.className = 'form-control is-valid';
+            console.log('validado');
+            console.log(input.value);
+        }
+        else
+        {
+            input.className = 'form-control is-invalid';
+            console.log('no validado');
+            console.log(input.value);
+        }
+      } else {
+        input.className = " form-control is-invalid";
+        console.log(input.value)
+      }
+}
 export function validarGmail(input) {
-    let patron =/\w+@+[gmail]\w+\.+[a-z]/;
+
+    let patron = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
     if (patron.test(input.value.trim())) {
         input.className = " form-control is-valid";
         
