@@ -28,7 +28,7 @@ export function cantidadCaracteres(input, min, max)
     }
 }
 export function validarSoloLetras(input,min,max){
-    let patron = /^[A-Z]+$/i;
+    let patron = /^[A-Z\s]+$/i;
     let text = input.value.trim();
 
     if (text.length >= min && text.length <= max ){
