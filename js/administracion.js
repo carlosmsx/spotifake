@@ -27,7 +27,6 @@ btnCrearCancion.addEventListener("click", ()=>{
     editando = false;
     modalAdminCancion.show();
 })
-
 //eventos de validaciones
 codigo.addEventListener("blur", ()=>{ campoRequerido(codigo); });
 codigo.addEventListener("keyDown", ()=>{ cantidadCaracteres(codigo, 1, 5); });

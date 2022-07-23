@@ -218,6 +218,7 @@
           id="bannerRegistro"
         />
       </article>
+      <!-- inicio registro -->
       <section class="container p-5">
         <h1 class="text-center">Registro</h1>
         <hr />
@@ -231,7 +232,7 @@
                 <span class="input-group-text" id="basic-addon1">@</span>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control "
                   placeholder="usuario"
                   aria-label="usuario"
                   aria-describedby="basic-addon1"
@@ -256,28 +257,26 @@
             </div>
             <div class="col-md-6">
               <label for="inputFechaNac" class="form-label"
-                >Fecha de nacimiento</label
+                >Fecha de nacimiento<small class="text-light">: DD/MM/AAAA</small></label
               >
               <input
-                type="date"
+                type="text"
                 class="form-control"
                 id="inputFechaNac"
                 required
               />
+              <div class="invalid-feedback fw-bold">
+                Años validos:(1930-2004).
+              </div>
             </div>
             <div class="col-md-6">
-              <label for="inputSexo" class="form-label">Sexo</label>
-              <select
-                class="form-select"
-                id="floatingSelect"
-                aria-label="Floating label select example"
-                required
-              >
-                <option selected>Seleccione una opción</option>
-                <option value="1">Hombre</option>
-                <option value="2">Mujer</option>
-                <option value="3">No binario</option>
-                <option value="4">Otro</option>
+              <label for="inputSexo" class="form-label">Género</label>
+              <select id="inputSexo" class="form-control">
+                  <option value="">Seleccione una opcion</option> 
+                  <option value="1">Hombre</option>
+                  <option value="2">Mujer</option>
+                  <option value="3">No binario</option>
+                  <option value="4">Otro</option>
               </select>
             </div>
             <div class="col-md-2">
@@ -579,7 +578,7 @@
               />
             </div>
             <div class="col-md-6">
-              <label for="inputPassword" class="form-label">Contraseña</label>
+              <label for="inputPassword" class="form-label">Contraseña <small class="text-muted">(entre 8 y 15 caracteres)</small></label>
               <input
                 type="password"
                 class="form-control"
@@ -588,19 +587,25 @@
                 maxlength="20"
                 required
               />
+              <div class="invalid-feedback fw-bold">
+                Introducir al menos una letra munuscula, una mayuscula,1 digito y un caracter especial.
+              </div>
             </div>
             <div class="col-md-6">
-              <label for="ìnputPassword2" class="form-label"
+              <label for="inputPassword2" class="form-label"
                 >Repetir contraseña</label
               >
               <input
                 type="password"
                 class="form-control"
-                id="ìnputPassword2"
+                id="inputPassword2"
                 minlength="5"
                 maxlength="20"
                 required
               />
+              <div class="invalid-feedback fw-bold">
+                Contraseña incorrecta.
+              </div>
             </div>
             <div class="col-12 text-center mt-4">
               <button type="submit" class="btn" id="btnRegistrarme">
@@ -646,5 +651,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/registro.js" type="module"></script>
   </body>
 </html>
