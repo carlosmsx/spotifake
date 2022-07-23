@@ -338,17 +338,17 @@ a:active {
   background-color: #006d77;
 }
 
-#breadcrumb li{
+#breadcrumb li {
   font-weight: 400;
   color: #2e294e;
 }
 
-#breadcrumb a{
+#breadcrumb a {
   color: white;
   font-weight: 400;
 }
 
-#breadcrumb a:hover{
+#breadcrumb a:hover {
   color: #ff4365;
 }
 
@@ -359,5 +359,16 @@ a:active {
 
 .imgDetalle {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+#botonReproducir {
+  background-color: #ff4365;
+  border: 2px solid #ff4365;
+}
+
+#botonReproducir:hover {
+  background-color: #312d4f;
+  border: 2px solid #ff4365;
 }
