@@ -30,7 +30,7 @@ detalleCancion.innerHTML = `
             <div>
               <span class="badge bg-secondary">ID ${cancionBuscada.codigo}</span>
               <h3 class="my-2">${cancionBuscada.titulo}</h3>
-              <h5>${cancionBuscada.artista}</h5>
+              <h6>${cancionBuscada.artista}</h6>
               <hr />
             </div>
             <div>

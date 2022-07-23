@@ -191,7 +191,7 @@ a:active {
   }
 }
 /* clase para filtrar canciones */
-.filtro{
+.filtro {
   display: none;
 }
 /* Tablets */
@@ -374,4 +374,10 @@ a:active {
 #botonReproducir:hover {
   background-color: #312d4f;
   border: 2px solid #ff4365;
+}
+
+@media (min-width: 992px) {
+  .tarjetaDetalle {
+    max-height: 270px;
+  }
 }
