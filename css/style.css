@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
-
+/*Lista de reproduccion*/
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@700&display=swap');
 * {
   font-family: "Inter", sans-serif;
   font-weight: 300;
@@ -86,6 +87,7 @@ footer a:hover,
 
 .img-principal {
   background-image: url(../img/fondoPrincipal/imagen4.jpg);
+  /* background-image: url(../img/listaReproduccion/transparente-negro.png); */
   /* https://i.pinimg.com/564x/ad/f6/ae/adf6aef0785eb56ac6bbd828788bef1e.jpg */
   background-repeat: no-repeat;
   background-position: center center;
@@ -93,7 +95,20 @@ footer a:hover,
   background-attachment: fixed;
   background-size: cover;
 }
-
+.bg-general{
+  background-image: url(../img/listaReproduccion/fondo-degrades.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* height: 2000px; */
+  background-attachment: fixed;
+  background-size: cover;
+  background-color:  #05a1ad;
+}
+.text-lista-reproduccion{
+  font-family: 'Cuprum', sans-serif;
+  /* font-weight: 700; */
+  font-size: 60px; 
+}
 .Banner-index {
   width: 100%;
   height: 300px;
@@ -188,6 +203,9 @@ a:active {
   }
   .mss-5 {
     padding-left: 5px;
+  }
+  .mt-sm-40px{
+    padding-top: 40px;
   }
 }
 /* clase para filtrar canciones */
