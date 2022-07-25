@@ -230,22 +230,20 @@
           <form class="row g-3" id="registro">
 
             <div class="col-12">
-              <label for="inputName" class="form-label"
+              <label for="inputNombre" class="form-label"
                 >Nombre y Apellido</label
               >
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="nombre y apellido"
-                  id="inputName"
-                  minlength="4"
-                  maxlength="15"
-                  required
-                />
-                <div class="invalid-feedback fw-bold">
-                  Introducir entre 5 y 30 caracteres
-                </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="nombre y apellido"
+                id="inputNombre"
+                minlength="4"
+                maxlength="15"
+                required
+              />
+              <div class="invalid-feedback fw-bold">
+                Introducir entre 5 y 30 caracteres
               </div>
             </div>
 
@@ -256,18 +254,18 @@
               <div class="input-group">
                 <span class="input-group-text" id="basic-addon1">@</span>
                 <input
-                  type="text"
-                  class="form-control "
-                  placeholder="usuario"
-                  id="inputUser"
-                  minlength="4"
-                  maxlength="8"
-                  required
+                type="text"
+                class="form-control input-group-append"
+                placeholder="usuario"
+                id="inputUser"
+                minlength="4"
+                maxlength="8"
+                required
                 />
+              </div>
                 <div class="invalid-feedback fw-bold">
                   Introducir entre 4 y 8 caracteres
                 </div>
-              </div>
             </div>
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
@@ -283,9 +281,10 @@
             </div>
             <div class="col-md-4">
               <label for="inputFechaNac" class="form-label"
-                >Fecha de nacimiento<small class="text-light">: DD/MM/AAAA</small></label
+                >Fecha de nacimiento</label
               >
               <input
+                placeholder="DD/MM/AAAA"
                 type="text"
                 class="form-control"
                 id="inputFechaNac"
@@ -295,7 +294,7 @@
                 Años validos:(1930-2004) respetar formato fecha
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <label for="inputSexo" class="form-label">Género</label>
               <select id="inputSexo" class="form-control">
                   <option value="">Seleccione una opcion</option> 
@@ -333,7 +332,7 @@
                 Introducir solo numeros
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <label for="inputDireccionLoc" class="form-label"
                 >Localidad</label
               >
@@ -350,7 +349,7 @@
                 Introducir solo letras
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <label for="inputPais" class="form-label">País</label>
               <select
                 name="country"
