@@ -3,10 +3,11 @@ import {campoRequerido,validarSoloLetras, cantidadCaracteres,validarGmail,valida
 
 //cargar vector usuarios
 let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
-console.log(vectorUsuarios)
+let usuarioActivo  = JSON.parse(localStorage.getItem("usuarioActivoKey")) || null; //carga el usuario logueado
 
 //form controls
-let nombre = document.getElementById('inputUser');
+let nombre = document.getElementById('inputNombre');
+let usuario = document.getElementById('inputUser');
 let gmail = document.getElementById('inputEmail4');
 let fechaNacimiento = document.getElementById('inputFechaNac');
 let genero = document.getElementById('inputSexo');
@@ -19,7 +20,8 @@ let clave =  document.getElementById('inputPassword');
 let clave2 = document.getElementById('inputPassword2');
 
 //validaciones por evento
-nombre.addEventListener('blur',()=>{cantidadCaracteres(nombre,4,8)});
+nombre.addEventListener('blur',()=>{cantidadCaracteres(nombre,5,30)});
+usuario.addEventListener('blur',()=>{cantidadCaracteres(usuario,4,8)});
 gmail.addEventListener('blur',()=>{validarGmail(gmail)});
 gmail.addEventListener("keyDown", ()=>{ campoRequerido(gmail); });
 fechaNacimiento.addEventListener('blur',()=>{validarfechaNacimiento(fechaNacimiento)});
@@ -36,7 +38,7 @@ clave.addEventListener('blur',()=>{funclave(clave)});
 clave2.addEventListener('blur',()=>{validarClave(clave,clave2)});
 clave2.addEventListener('focus',()=>{limpiarClaveValidada(clave2)});
 
-let formulario = document.getElementById("formularioRegistro");
+let formulario = document.getElementById("registro");
 formulario.addEventListener('submit', (e)=>{
     e.preventDefault();
     //TODO: validar antes de guardar
@@ -44,9 +46,9 @@ formulario.addEventListener('submit', (e)=>{
     //... validar que el usuario no exista ya en vectorUsuarios
     //...
 
-    let nuevoUsuario = new Usuario(nombre.value, gmail.value, fechaNacimiento.value, 
-        genero.value, calle.value, nroCalle.value, provincia.value, 
-        pais.value, codigoPostal.value, clave.value);
+    let nuevoUsuario = new Usuario(nombre.value, usuario.value, gmail.value, 
+        fechaNacimiento.value, genero.value, calle.value, nroCalle.value, 
+        provincia.value, pais.value, codigoPostal.value, clave.value);
     vectorUsuarios.push(nuevoUsuario);
 
     //Guardar en local storage
