@@ -33,7 +33,7 @@
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.htmls">
+          <a class="navbar-brand" href="index.html">
             <img
               src="img/Logo.png"
               alt="Logo Spotifake"
@@ -101,12 +101,13 @@
                   aria-labelledby="navbarDropdown"
                   id="navDropdown"
                 >
-                  <li><a class="dropdown-item" href="#">Usuario</a></li>
-                  <li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal"
+                    data-bs-target="#modalLogin">Usuario</a></li>
+                  <!-- <li>
                     <a class="dropdown-item" href="pages/administracion.html"
                       >Administrador</a
                     >
-                  </li>
+                  </li> -->
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a class="dropdown-item" href="pages/error404.html"
@@ -118,7 +119,7 @@
             </ul>
             <form class="d-flex" role="search">
               <input
-                class="form-control me-2"               
+                class="form-control me-2"
                 type="search"
                 id="buscador"
                 name="buscador"
@@ -331,7 +332,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-12 col-md-6 col-lg-4 ">
+              <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                   <div class="row px-2">
                     <div class="card mb-3 px-0" style="max-width: 540px">
@@ -353,7 +354,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-12 col-md-6 col-lg-4 ">
+              <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                   <div class="row px-2">
                     <div class="card mb-3 px-0" style="max-width: 540px">
@@ -375,7 +376,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-12 col-md-6 col-lg-4 ">
+              <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                   <div class="row px-2">
                     <div class="card mb-3 px-0" style="max-width: 540px">
@@ -397,7 +398,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-12 col-md-6 col-lg-4 ">
+              <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                   <div class="row px-2">
                     <div class="card mb-3 px-0" style="max-width: 540px">
@@ -419,7 +420,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-12 col-md-6 col-lg-4 ">
+              <div class="col-12 col-md-6 col-lg-4">
                 <a href="#">
                   <div class="row px-2">
                     <div class="card mb-3 px-0" style="max-width: 540px">
@@ -448,93 +449,10 @@
             <h2 class="text-light py-4 offcanvasListaSubTitulo">
               Canciones agregadas recientemente
             </h2>
-            <article class="row py-2 bg-fila-canciones">
-              <div class="col-6 col-md-3 col-lg-2 py-3 articulo">
-                <a href="#">
-                  <div class="card h-100 cardsEfect">
-                    <img
-                      src="img/musica/micro.jpg"
-                      class="card-img-top"
-                      alt="img-cancion"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">Musica relax</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-     
-              <div class="col-6 col-md-3 col-lg-2 py-3 articulo">
-                <a href="#">
-                  <div class="card h-100 cardsEfect">
-                    <img
-                      src="img/musica/img2.jpg"
-                      class="card-img-top"
-                      alt="img-cancion"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">ponte a meditar.</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-3 col-lg-2 py-3 articulo">
-                <a href="#">
-                  <div class="card h-100 cardsEfect">
-                    <img
-                      src="img/musica/img3.jpg"
-                      class="card-img-top"
-                      alt="img-cancion"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">nuevos lanzamientos</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-3 col-lg-2 py-3 articulo">
-                <a href="#">
-                  <div class="card h-100 cardsEfect">
-                    <img
-                      src="img/musica/noTeVaGustar.jpg"
-                      class="card-img-top"
-                      alt="img-cancion"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">No te va Gustar</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-3 col-lg-2 py-3 articulo">
-                <a href="#">
-                  <div class="card h-100 cardsEfect">
-                    <img
-                      src="img/musica/nirvana.jpg"
-                      class="card-img-top"
-                      alt="img-cancion"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">Nirvana</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-3 col-lg-2 py-3 articulo">
-                <a href="#">
-                  <div class="card h-100 cardsEfect">
-                    <img
-                      src="img/musica/arctic monkeys.jpg"
-                      class="card-img-top"
-                      alt="img-cancion"
-                    />
-                    <div class="card-body">
-                      <p class="card-text">nuevos albunes</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </article>
+            <article
+              class="row py-2 bg-fila-canciones"
+              id="seccionCanciones"
+            ></article>
           </section>
           <!-- fila 2 de canciones  -->
           <section class="py-20">
@@ -878,6 +796,39 @@
         </article>
       </section>
     </footer>
+    <!-- modal login -->
+    <div class="modal" tabindex="-1" id="modalLogin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formLogin">
+                <div class="mb-3">
+                  <label for="inputUsuario" class="form-label">Usuario</label>
+                  <input type="text" class="form-control" id="inputUsuario" aria-describedby="emailHelp">
+                  
+                </div>
+                <div class="mb-3">
+                  <label for="inputClave" class="form-label">Clave</label>
+                  <input type="password" class="form-control" id="inputClave">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                <a href="#paginaRegistro" class="btn btn-success">Registrarse</a>
+              </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
     <script src="js/buscador.js"></script>
     <!-- link de efecto imagenes -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -891,5 +842,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="js/app.js" type="module"></script>
   </body>
 </html>
