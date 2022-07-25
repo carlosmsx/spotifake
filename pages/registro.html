@@ -227,10 +227,31 @@
         <h1 class="text-center">Registro</h1>
         <hr />
         <article class="formRegistro">
-          <form id="formularioRegistro" class="row g-3" id="registro">
+          <form class="row g-3" id="registro">
+
+            <div class="col-12">
+              <label for="inputName" class="form-label"
+                >Nombre y Apellido</label
+              >
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="nombre y apellido"
+                  id="inputName"
+                  minlength="4"
+                  maxlength="15"
+                  required
+                />
+                <div class="invalid-feedback fw-bold">
+                  Introducir entre 5 y 30 caracteres
+                </div>
+              </div>
+            </div>
+
             <div class="col-md-6">
               <label for="inputUser" class="form-label"
-                >Nombre de usuario</label
+                >Usuario</label
               >
               <div class="input-group">
                 <span class="input-group-text" id="basic-addon1">@</span>
@@ -238,15 +259,13 @@
                   type="text"
                   class="form-control "
                   placeholder="usuario"
-                  aria-label="usuario"
-                  aria-describedby="basic-addon1"
                   id="inputUser"
                   minlength="4"
-                  maxlength="15"
+                  maxlength="8"
                   required
                 />
                 <div class="invalid-feedback fw-bold">
-                  Introducir entre 4 y 8 digitos
+                  Introducir entre 4 y 8 caracteres
                 </div>
               </div>
             </div>
@@ -262,7 +281,7 @@
                 required
               />
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <label for="inputFechaNac" class="form-label"
                 >Fecha de nacimiento<small class="text-light">: DD/MM/AAAA</small></label
               >
@@ -276,7 +295,7 @@
                 Años validos:(1930-2004) respetar formato fecha
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
               <label for="inputSexo" class="form-label">Género</label>
               <select id="inputSexo" class="form-control">
                   <option value="">Seleccione una opcion</option> 
@@ -286,7 +305,7 @@
                   <option value="4">Otro</option>
               </select>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
               <label for="inputDireccion" class="form-label">Calle</label>
               <input
                 type="text"
