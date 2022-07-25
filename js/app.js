@@ -14,7 +14,7 @@ function cargaTarjetas() {
 function crearTarjeta(cancion) {
   let seccionCanciones = document.getElementById("seccionCanciones");
   seccionCanciones.innerHTML += `
-  <div class="col-6 col-md-3 col-lg-2 py-3" onclick="verDetalle(${cancion.codigo})">
+  <div class="col-6 col-md-3 col-lg-2 py-3 articulo" onclick="verDetalle(${cancion.codigo})">
                   <div class="card h-100 cardsEfect">
                     <img
                       src="${cancion.imagen}"
