@@ -384,7 +384,11 @@ a:active {
   object-fit: cover;
 }
 .color-btn-AgregaCancion{
-  color: #2e294e;
+  color:   #312d4f;
+}
+.color-btn-AgregaCancion:hover{
+  color:#ff4365;
+ 
 }
 #botonReproducir {
   background-color: #ff4365;

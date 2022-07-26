@@ -18,7 +18,7 @@ function cargaTarjetas() {
 function crearTarjeta(cancion) {
   let seccionCanciones = document.getElementById("seccionCanciones");
   seccionCanciones.innerHTML += `
-                 <div class="col-6 col-md-3 col-lg-2 py-3 articulo" >
+                 <div class="col-6 col-md-3 col-lg-2 py-3 articulo"  >
                     <div class="card h-100 cardsEfect" > 
                        <img
                          src="${cancion.imagen}"
@@ -29,13 +29,16 @@ function crearTarjeta(cancion) {
                          <p class="card-text">${cancion.titulo}</p>
 
                         <!-- boton seleccion -->
-                     
-                        <div class="d-flex  justify-content-end">
-                          <button type="button" onclick="agregarCancion('${cancion.codigo}')" class="rounded-circle">
-                         <i class="bi bi-plus-circle-fill color-btn-AgregaCancion fs-2">
+                        <div class="row ">
+                        <div class='col-12 d-flex  justify-content-end'onclick="verDetalle(${cancion.codigo})"> 
+                          <i class="bi bi-play-circle-fill color-btn-AgregaCancion fs-1"></i>
                           </i>
-                          </button>
-                        </div> 
+                        </div>
+                        <div class='col-12 d-flex  justify-content-end' onclick="agregarCancion('${cancion.codigo}')"> 
+                        <i class="bi bi-plus-square-fill color-btn-AgregaCancion fs-3">
+                        </i> </div>
+                        
+                   
                       </div>
                     </div>
               </div>`;

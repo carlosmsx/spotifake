@@ -1,20 +1,39 @@
-//desde aqui nico
+
 let tablaMiListaCanciones = document.getElementById("tablaMiListaCanciones");
+//recupero el paramentro
 const parametro = window.location.search;
 const urlParam = new URLSearchParams(parametro);
-
+//Recupero la lista de canciones
 let listaCanciones =
   JSON.parse(localStorage.getItem("vectorCancionesKey")) || [];
+  //Recupero la cancion agregada
 let cancionAgregada = listaCanciones.find((cancion) => {
   return cancion.codigo == urlParam.get("codigo");
 });
-console.log(cancionAgregada);
-let listaUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || [];
-let usuarioActivo = listaUsuarios.find((usuario) => {
-  return usuario.email == "nico@gmail.com"; // estoy hay que modificarlo con el usuario logeado mas adelante
-});
-console.log (usuarioActivo);
 
+console.log(cancionAgregada);
+//traemos la lista de usuarios
+let listaUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || [];
+//traemos el usuario logueado 
+let usuarioActivo = localStorage.getItem('usuarioActivoKey') || 'nico@gmail.com';
+console.log(usuarioActivo);
+let indiceUsuario = listaUsuarios.findIndex((usuario) => {
+  return usuario.email == usuarioActivo;
+});
+
+let indiceCancion = listaUsuarios[indiceUsuario].canciones.findIndex((cancion) => {
+    return cancion.codigo == cancionAgregada.codigo;
+  });
+
+if(indiceCancion == -1){
+    listaUsuarios[indiceUsuario].canciones.push(cancionAgregada);
+}
+
+localStorage.setItem('vectorUsuariosKey',JSON.stringify(listaUsuarios));
+console.log(listaUsuarios);
+listaUsuarios[indiceUsuario].canciones.forEach(cancion => {
+    crearMiLista(cancion);
+});
 
 function crearMiLista(cancion){
   let newRow = 
