@@ -46,11 +46,60 @@ function crearMiLista(cancion){
   <td>${cancion.duracion}</td>
   <td><p class="adminTrim">${cancion.cancion}</p></td>
   <td>
-      <button class="btn btnEditar" onclick="modificarCancion('${cancion.codigo}')"><i class="bi bi-pencil-square"></i></button>
       <button class="btn btnBorrar" onclick="borrarCancion('${cancion.codigo}')"><i class="bi bi-x-square"></i></button>
   </td>
   </tr>`
 
   tablaMiListaCanciones.innerHTML += newRow;
 }
+// borramos la cancion
+window.borrarCancion = function(codigo)
+{
+    Swal.fire({
+        title: 'Está seguro de eliminar la cancion?',
+        text: "Tenga en cuenta que no puede revertir este paso",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Borrar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let vectorCancionesNuevo = listaCanciones.filter((cancion)=>{ return cancion.codigo != codigo; });
+            listaCanciones = vectorCancionesNuevo;
+            guardarMiListaCanciones();
+            actualizarTablaMisCanciones();
+            Swal.fire(
+                'Cancion eliminada!',
+                'La cancion fue eliminada.',
+                'success'
+            )
+        }
+    })
+}
+
+
+function guardarMiListaCanciones()
+{
+    localStorage.setItem('vectorCancionesKey', JSON.stringify(listaCanciones))   
+}
+
+
+function actualizarTablaMisCanciones()
+{
+    tablaMiListaCanciones.innerHTML = "";
+    cargarMisCanciones();
+}
+
+function cargarMisCanciones()
+{
+    if (listaCanciones > 0)
+    {
+        listaCanciones.forEach((item)=>{
+            crearMiLista(item)
+        })
+    }
+}
+
 // fin nico
