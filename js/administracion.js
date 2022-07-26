@@ -21,6 +21,8 @@ const modalAdminCancion = new bootstrap.Modal(document.getElementById("modalCanc
 let btnCrearCancion = document.getElementById("btnCrearCancion")
 let tablaCanciones = document.getElementById("tablaCanciones")
 
+
+
 btnCrearCancion.addEventListener("click", ()=>{
     limpiarFormulario();
     codigo.value = getUniqueId();
@@ -198,3 +200,8 @@ function guardarEdicionCancion()
     //cerrar ventana modal
     modalAdminCancion.hide();
 }
+
+
+
+
+
