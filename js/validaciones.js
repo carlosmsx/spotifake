@@ -116,7 +116,6 @@ export function validarfechaNacimiento(input){
         
     }else{
         input.className += ' is-invalid';
-        console.log(anioIngresado);
     }
 }
 export function validarGenero(input){

@@ -4,6 +4,8 @@ import { getUniqueId } from './guid.js';
 
 //si hay algo en localstorage traer los datos, si no crear el arreglo vacio
 let vectorCanciones = JSON.parse(localStorage.getItem("vectorCancionesKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
+let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
+console.log(vectorUsuarios)
 
 //traemos los elementos que nos interesen
 
@@ -20,6 +22,7 @@ let formulario = document.getElementById("formCancion")
 const modalAdminCancion = new bootstrap.Modal(document.getElementById("modalCancion"))
 let btnCrearCancion = document.getElementById("btnCrearCancion")
 let tablaCanciones = document.getElementById("tablaCanciones")
+let tablaUsuarios = document.getElementById("tablaUsuarios")
 
 
 
@@ -55,7 +58,8 @@ cancion.addEventListener("blur", ()=>{ validarUrl(cancion); });
 
 formulario.addEventListener('submit', guardarCancion)
 
-cargaInicial()
+cargarCanciones()
+cargarUsuarios()
 
 function guardarCancion(e)
 {
@@ -82,7 +86,7 @@ function crearCancion()
     //cerrar modal
     modalAdminCancion.hide();
     //agrgar fila a tabla
-    crearFila(nuevaCancion);
+    renderFilaCancion(nuevaCancion);
     //mostrar el ok
     Swal.fire('Cancion creada', 'La cancion fue creada correctamente', 'success');
 }
@@ -103,17 +107,32 @@ function guardarListaCanciones()
     localStorage.setItem('vectorCancionesKey', JSON.stringify(vectorCanciones))   
 }
 
-function cargaInicial()
+function guardarListaUsuarios()
+{
+    localStorage.setItem('vectorUsuariosKey', JSON.stringify(vectorUsuarios))   
+}
+
+function cargarCanciones()
 {
     if (vectorCanciones.length > 0)
     {
         vectorCanciones.forEach((item)=>{
-            crearFila(item)
+            renderFilaCancion(item)
         })
     }
 }
 
-function crearFila(cancion)
+function cargarUsuarios()
+{
+    if (vectorUsuarios.length > 0)
+    {
+        vectorUsuarios.forEach((item)=>{
+            renderFilaUsuario(item)
+        })
+    }
+}
+
+function renderFilaCancion(cancion)
 {
     let newRow = 
     `<tr>
@@ -131,6 +150,23 @@ function crearFila(cancion)
     </tr>`
 
     tablaCanciones.innerHTML += newRow
+}
+
+function renderFilaUsuario(usuario)
+{
+    let newRow = 
+    `<tr>
+    <td>${usuario.usuario}</td>
+    <td>${usuario.email}</td>
+    <td><p class="adminTrim">${usuario.nombre}</p></td>
+    <td>${usuario.fechaNac}</td>
+    <td>usuario</td>
+    <td>
+        <button class="btn btnBorrar" onclick="borrarUsuario('${usuario.email}')"><i class="bi bi-x-square"></i></button>
+    </td>
+    </tr>`
+
+    tablaUsuarios.innerHTML += newRow
 }
 
 window.borrarCancion = function(codigo)
@@ -159,10 +195,42 @@ window.borrarCancion = function(codigo)
     })
 }
 
+window.borrarUsuario = function(email)
+{
+    Swal.fire({
+        title: 'Está seguro de eliminar al usuario?',
+        text: "Tenga en cuenta que no puede revertir este paso",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Borrar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let vectorUsuariosNuevo = vectorUsuarios.filter((usuario)=>{ return usuario.email != email; });
+            vectorUsuarios = vectorUsuariosNuevo;
+            guardarListaUsuarios();
+            actualizarTablaUsuarios();
+            Swal.fire(
+                'Usuario eliminado!',
+                'El usuario fue eliminado.',
+                'success'
+            )
+        }
+    })
+}
+
 function actualizarTabla()
 {
     tablaCanciones.innerHTML = "";
-    cargaInicial();
+    cargarCanciones();
+}
+
+function actualizarTablaUsuarios()
+{
+    tablaUsuarios.innerHTML = "";
+    cargarUsuarios();
 }
 
 window.modificarCancion = (codigoCancion)=>

@@ -1,14 +1,14 @@
-import { playMusic } from "./reproducir.js";
+import { playInit, playMusic } from "./reproducir.js";
+import {login} from "./login.js"
 
 const parametro = window.location.search;
 const urlParam = new URLSearchParams(parametro);
-let reproduciendo = false;
 
-let listaCanciones =
-  JSON.parse(localStorage.getItem("vectorCancionesKey")) || [];
+let listaCanciones = JSON.parse(localStorage.getItem("vectorCancionesKey")) || [];
 let cancionBuscada = listaCanciones.find((cancion) => {
   return cancion.codigo == urlParam.get("codigo");
 });
+let formLogin = document.getElementById("formLogin")
 
 let detalleCancion = document.getElementById("tarjetaDetalle");
 detalleCancion.innerHTML = `
@@ -41,9 +41,11 @@ detalleCancion.innerHTML = `
           </div>
         </article>`;
 
-window.set = function (cancion) {
-  let music = new Audio(cancion);
-  let reproducir = reproduciendo;
-  console.log(`reproducir ${reproducir}`);
-  reproduciendo = playMusic(music, reproducir);
-};
+playInit("botonReproducir", cancionBuscada.cancion);
+
+window.set = function (cancion) 
+{
+  playMusic();
+}
+
+formLogin.addEventListener("submit", login);

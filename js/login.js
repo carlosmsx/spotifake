@@ -19,7 +19,7 @@ export function login(e){
     if (inputUsuario.value == "administrador"){
         if( inputClave.value == "administrador"){
             // insertar pagina del admin
-            window.location = "pages/administracion.html";
+            window.location = "/pages/administracion.html";
         }else{
             alert("clave incorrecta");
         }
