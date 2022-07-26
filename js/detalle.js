@@ -1,8 +1,10 @@
 import { playMusic } from "./reproducir.js";
+import {login} from "./login.js"
 
 const parametro = window.location.search;
 const urlParam = new URLSearchParams(parametro);
 let reproduciendo = false;
+let formLogin = document.getElementById("formLogin")
 
 let listaCanciones =
   JSON.parse(localStorage.getItem("vectorCancionesKey")) || [];
@@ -47,3 +49,5 @@ window.set = function (cancion) {
   console.log(`reproducir ${reproducir}`);
   reproduciendo = playMusic(music, reproducir);
 };
+
+formLogin.addEventListener("submit", login);

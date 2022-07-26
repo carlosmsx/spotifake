@@ -2,7 +2,7 @@ import {login} from "./login.js"
 let listaCanciones =
   JSON.parse(localStorage.getItem("vectorCancionesKey")) || [];
 cargaTarjetas();
-const formLogin = document.getElementById("formLogin")
+let formLogin = document.getElementById("formLogin")
 // Si hay datos dibujar las cards
 
 function cargaTarjetas() {

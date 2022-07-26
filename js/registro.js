@@ -1,9 +1,11 @@
 import { Usuario } from './usuarioClass.js';
 import {campoRequerido,validarSoloLetras, cantidadCaracteres,validarGmail,validarfechaNacimiento,validarGenero,validarPais,funclave,validarClave,limpiarClaveValidada} from "./validaciones.js";
+import {login} from "./login.js"
 
 //cargar vector usuarios
 let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
 let usuarioActivo  = JSON.parse(localStorage.getItem("usuarioActivoKey")) || null; //carga el usuario logueado
+let formLogin = document.getElementById("formLogin")
 
 //form controls
 let nombre = document.getElementById('inputNombre');
@@ -76,3 +78,5 @@ function limpiarFormulario()
         item.className = "form-control";
     })
 }
+
+formLogin.addEventListener("submit", login);

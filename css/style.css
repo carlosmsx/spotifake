@@ -376,6 +376,21 @@ a:active {
   border: 2px solid #ff4365;
 }
 
+/* modal login */
+.textoModal {
+  color: #312d4f;
+}
+
+.btnModal{
+  background-color: #ff4365;
+  border: 2px solid #ff4365;
+}
+
+.btnModal:hover{
+  background-color: #312d4f;
+  border: 2px solid #312d4f;
+}
+
 @media (min-width: 992px) {
   .tarjetaDetalle {
     max-height: 270px;
