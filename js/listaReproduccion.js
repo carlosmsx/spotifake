@@ -66,8 +66,8 @@ window.borrarCancion = function(codigo)
         cancelButtonText: 'Cancelar'
     }).then((result) => {
         if (result.isConfirmed) {
-            let vectorCancionesNuevo = listaCanciones.filter((cancion)=>{ return cancion.codigo != codigo; });
-            listaCanciones = vectorCancionesNuevo;
+            let vectorCancionesNuevo = listaUsuarios[indiceUsuario].canciones.filter((cancion)=>{ return cancion.codigo != codigo; });
+            listaUsuarios[indiceUsuario].canciones = vectorCancionesNuevo;
             guardarMiListaCanciones();
             actualizarTablaMisCanciones();
             Swal.fire(
@@ -82,9 +82,8 @@ window.borrarCancion = function(codigo)
 
 function guardarMiListaCanciones()
 {
-    localStorage.setItem('vectorCancionesKey', JSON.stringify(listaCanciones))   
+    localStorage.setItem('vectorUsuariosKey', JSON.stringify(listaUsuarios))   
 }
-
 
 function actualizarTablaMisCanciones()
 {
@@ -94,9 +93,9 @@ function actualizarTablaMisCanciones()
 
 function cargarMisCanciones()
 {
-    if (listaCanciones > 0)
+    if (listaUsuarios[indiceUsuario].canciones.length  > 0)
     {
-        listaCanciones.forEach((item)=>{
+      listaUsuarios[indiceUsuario].canciones.forEach((item)=>{
             crearMiLista(item)
         })
     }
