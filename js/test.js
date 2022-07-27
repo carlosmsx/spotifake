@@ -54,7 +54,7 @@ let userTest = `[
         "localidad": "tucuman",
         "pais": "AR",
         "codigoPostal": "4000",
-        "password": "Hola123$",
+        "password": "hola123$",
         "canciones": []
     },
     {
