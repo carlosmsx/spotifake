@@ -18,15 +18,17 @@ detalleCancion.innerHTML = `
             <li class="breadcrumb-item active" aria-current="page">Detalle "${cancionBuscada.titulo}"</li>
           </ol>
         </nav>
-        <article class="row bg-dark tarjetaDetalle rounded-3">
+        <article class="row rounded-3">
           <div class="col-12 col-md-4 p-0">
+          <div class="card bg-dark ">
             <img
               src="${cancionBuscada.imagen}"
               alt=""
               class="imgDetalle"
             />
+            </div>
           </div>
-          <div class="col-12 col-md-8 my-3">
+          <div class="col-12 col-md-8">
             <div>
               <span class="badge bg-secondary">ID ${cancionBuscada.codigo}</span>
               <h3 class="my-2">${cancionBuscada.titulo}</h3>
