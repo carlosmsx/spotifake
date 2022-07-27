@@ -1,11 +1,9 @@
-import {login} from "./login.js"
+import { login, cambioNav } from "./login.js";
 
 let listaCanciones =
   JSON.parse(localStorage.getItem("vectorCancionesKey")) || [];
 cargaTarjetas();
 const formLogin = document.getElementById("formLogin");
-
-
 
 // Si hay datos dibujar las cards
 
@@ -14,6 +12,10 @@ function cargaTarjetas() {
     crearTarjeta(cancion);
   });
 }
+
+let usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivoKey")) || [];
+window.onload = cambioNav(usuarioActivo);
+
 //onclick="verDetalle(${cancion.codigo})"
 function crearTarjeta(cancion) {
   let seccionCanciones = document.getElementById("seccionCanciones");
@@ -49,8 +51,8 @@ function crearTarjeta(cancion) {
 window.agregarCancion = (codigo) => {
   console.log(codigo);
   window.location.href =
-  window.location.origin + `/pages/listaReproduccion.html?codigo=${codigo}`;
-}
+    window.location.origin + `/pages/listaReproduccion.html?codigo=${codigo}`;
+};
 
 //
 window.verDetalle = (codigo) => {
