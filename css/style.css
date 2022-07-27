@@ -207,6 +207,7 @@ a:active {
   .mt-sm-40px{
     padding-top: 40px;
   }
+
 }
 /* clase para filtrar canciones */
 .filtro {
@@ -231,6 +232,9 @@ a:active {
   }
   .mss-5 {
     padding-left: 60px;
+  }
+  .pt-85px{
+    padding-top: 100px;
   }
 }
 
@@ -384,7 +388,7 @@ a:active {
   object-fit: cover;
 }
 .color-btn-AgregaCancion{
-  color:   #312d4f;
+  color:   #312d4f86;
 }
 .color-btn-AgregaCancion:hover{
   color:#ff4365;
@@ -399,7 +403,12 @@ a:active {
   background-color: #312d4f;
   border: 2px solid #ff4365;
 }
-
+.pt-85px{
+  padding-top: 85px;
+}
+.pt-40px{
+  padding-top: 40px;
+}
 /* modal login */
 .textoModal {
   color: #312d4f;

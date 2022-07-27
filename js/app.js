@@ -25,23 +25,25 @@ function crearTarjeta(cancion) {
                          class="card-img-top"
                          alt="img-cancion"
                         />
+                        <div class="card-img-overlay">
+                        <div class="row pt-85px">
+                          <div class=' d-flex  justify-content-end 'onclick="verDetalle(${cancion.codigo})"> 
+                            <i class="bi bi-play-circle-fill color-btn-AgregaCancion fs-1"></i>
+                            </i>
+                          </div>
+                          <div class='pt-40px d-flex  justify-content-end' onclick="agregarCancion('${cancion.codigo}')"> 
+                            <i class="bi bi-plus-square-fill color-btn-AgregaCancion fs-3"></i>
+                          </div>
+                         </div>
+                      </div>
                       <div class="card-body">
                          <p class="card-text">${cancion.titulo}</p>
 
                         <!-- boton seleccion -->
-                        <div class="row ">
-                        <div class='col-12 d-flex  justify-content-end'onclick="verDetalle(${cancion.codigo})"> 
-                          <i class="bi bi-play-circle-fill color-btn-AgregaCancion fs-1"></i>
-                          </i>
-                        </div>
-                        <div class='col-12 d-flex  justify-content-end' onclick="agregarCancion('${cancion.codigo}')"> 
-                        <i class="bi bi-plus-square-fill color-btn-AgregaCancion fs-3">
-                        </i> </div>
                         
-                   
-                      </div>
-                    </div>
-              </div>`;
+                        </div>
+                     </div>
+                  </div>`;
 }
 //
 window.agregarCancion = (codigo) => {
