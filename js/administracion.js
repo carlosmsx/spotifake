@@ -1,6 +1,7 @@
 import {Cancion} from './cancionClass.js';
 import { campoRequerido, cantidadCaracteres, validarUrl } from "./validaciones.js";
 import { getUniqueId } from './guid.js';
+import {login} from "./login.js"
 
 //si hay algo en localstorage traer los datos, si no crear el arreglo vacio
 let vectorCanciones = JSON.parse(localStorage.getItem("vectorCancionesKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor

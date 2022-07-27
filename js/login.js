@@ -34,6 +34,7 @@ export function login(e){
         let usuarioEncontrado = vectorUsuarios.find((item)=>{return inputUsuario.value == item.usuario})
         console.log (usuarioEncontrado)
         if(usuarioEncontrado != undefined){
+            usuarioLogin.innerHTML = ``
             if( inputClave.value == usuarioEncontrado.password){
                 // insertar pagina del usuario
                 window.location = "/index.html";
@@ -44,12 +45,16 @@ export function login(e){
             }
         }
         else{
-        alert("usuario no encontrado");
+            usuarioNoRegistrado()
         }
     }
 }
 
 function contraseñaIncorrecta (){
     // e.preventDefault()
-    claveLogin.innerHTML += `<p class="text-danger text-sm">Clave incorrecta</p>`
+    claveLogin.innerHTML = `<p class="text-danger text-sm">Clave incorrecta</p>`
+}
+
+function usuarioNoRegistrado(){
+    usuarioLogin.innerHTML = `<p class="text-danger text-sm">Usuario no encontrado</p>`
 }

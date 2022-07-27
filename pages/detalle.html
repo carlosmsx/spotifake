@@ -74,7 +74,11 @@
               <li class="nav-item">
                 <a class="nav-link navLista" href="registro.html">Registro</a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item">
+                <a class="nav-link navLista" data-bs-toggle="modal"
+                    data-bs-target="#modalLogin">Iniciar sesión</a></li>
+              </li>
+              <!-- <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle navLista"
                   href="#"
@@ -92,11 +96,11 @@
                 >
                   <li><a class="dropdown-item" data-bs-toggle="modal"
                     data-bs-target="#modalLogin">Usuario</a></li>
-                  <!-- <li>
+                  <li>
                     <a class="dropdown-item" href="pages/administracion.html"
                       >Administrador</a
                     >
-                  </li> -->
+                  </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a class="dropdown-item" href="pages/error404.html"
@@ -104,7 +108,7 @@
                     >
                   </li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
             <form class="d-flex" role="search">
               <input
@@ -286,11 +290,12 @@
                 <div class="mb-3">
                   <label for="inputUsuario" class="form-label textoModal">Usuario</label>
                   <input type="text" class="form-control" id="inputUsuario" aria-describedby="emailHelp">
-                  
+                  <p id="usuarioLogin"></p>
                 </div>
                 <div class="mb-3">
                   <label for="inputClave" class="form-label textoModal">Clave</label>
                   <input type="password" class="form-control" id="inputClave">
+                  <p id="claveLogin"></p>
                 </div>
                 
                 <button type="submit" class="btn btnModal">Iniciar sesión</button>
