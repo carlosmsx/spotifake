@@ -279,7 +279,10 @@
                 maxlength="30"
                 required
               />
-            </div>
+              <div class="invalid-feedback fw-bold">
+                Email mínimo 14 caracteres, incluir @ y un punto
+              </div>
+          </div>
             <div class="col-md-4">
               <label for="inputFechaNac" class="form-label"
                 >Fecha de nacimiento</label
@@ -292,12 +295,12 @@
                 required
               />
               <div class="invalid-feedback fw-bold">
-                Años validos:(1930-2004) respetar formato fecha
+                Ingrese una fecha válida con formato DD/MM/AAAA, entre 1930 y 2004
               </div>
             </div>
             <div class="col-md-4">
               <label for="inputSexo" class="form-label">Género</label>
-              <select id="inputSexo" class="form-control">
+              <select id="inputSexo" class="form-control" required>
                   <option value="">Seleccione una opcion</option> 
                   <option value="1">Hombre</option>
                   <option value="2">Mujer</option>
@@ -327,10 +330,9 @@
                 class="form-control"
                 id="inputDireccionNro"
                 placeholder="1234"
-                required
               />
               <div class="invalid-feedback fw-bold">
-                Introducir solo numeros
+                Introducir solo numeros entre 1 y 6 dígitos
               </div>
             </div>
             <div class="col-md-4">
@@ -611,19 +613,22 @@
                 id="inputCP"
                 placeholder="4000"
               />
+              <div class="invalid-feedback fw-bold">
+                ingrese 4 dígitos.
+              </div>
             </div>
             <div class="col-md-6">
-              <label for="inputPassword" class="form-label">Contraseña <small class="text-muted">(entre 8 y 15 caracteres)</small></label>
+              <label for="inputPassword" class="form-label">Contraseña</label>
               <input
                 type="password"
                 class="form-control"
                 id="inputPassword"
-                minlength="5"
-                maxlength="20"
+                minlength="8"
+                maxlength="15"
                 required
               />
               <div class="invalid-feedback fw-bold">
-                Introducir al menos una letra minuscula, una mayuscula,1 digito y un caracter especial.
+                Introducir entre 8 y 15 caracteres con al menos una letra minúscula, una mayúscula, un digito y un caracter especial.
               </div>
             </div>
             <div class="col-md-6">
@@ -634,8 +639,8 @@
                 type="password"
                 class="form-control"
                 id="inputPassword2"
-                minlength="5"
-                maxlength="20"
+                minlength="8"
+                maxlength="15"
                 required
               />
               <div class="invalid-feedback fw-bold">

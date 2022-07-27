@@ -24,7 +24,9 @@ let clave2 = document.getElementById('inputPassword2');
 //validaciones por evento
 nombre.addEventListener('blur',()=>{cantidadCaracteres(nombre,5,30)});
 usuario.addEventListener('blur',()=>{cantidadCaracteres(usuario,4,8)});
+usuario.addEventListener('blur', ()=>{validarUsuarioRepetido(usuario)});
 gmail.addEventListener('blur',()=>{validarGmail(gmail)});
+gmail.addEventListener('blur',()=>{validarEmailRepetido(gmail)});
 gmail.addEventListener("keyDown", ()=>{ campoRequerido(gmail); });
 fechaNacimiento.addEventListener('blur',()=>{validarfechaNacimiento(fechaNacimiento)});
 fechaNacimiento.addEventListener("keyDown", ()=>{ campoRequerido(fechaNacimiento); });
@@ -43,10 +45,10 @@ clave2.addEventListener('focus',()=>{limpiarClaveValidada(clave2)});
 let formulario = document.getElementById("registro");
 formulario.addEventListener('submit', (e)=>{
     e.preventDefault();
-    //TODO: validar antes de guardar
-    //...
-    //... validar que el usuario no exista ya en vectorUsuarios
-    //...
+
+    //validar antes de guardar
+    if (validacionGeneral() == false)
+        return;
 
     let nuevoUsuario = new Usuario(nombre.value, usuario.value, gmail.value, 
         fechaNacimiento.value, genero.value, calle.value, nroCalle.value, 
@@ -62,6 +64,55 @@ formulario.addEventListener('submit', (e)=>{
     //mostrar el ok
     Swal.fire('Registración exitosa', 'Los datos de usuario se registraron correctamente', 'success');
 });
+
+function validacionGeneral()
+{
+    return cantidadCaracteres(nombre,5,30)
+        && cantidadCaracteres(usuario,4,8)
+        && validarUsuarioRepetido(usuario)
+        && validarGmail(gmail)
+        && campoRequerido(gmail)
+        && validarEmailRepetido(gmail)
+        && validarfechaNacimiento(fechaNacimiento)
+        && campoRequerido(fechaNacimiento)
+        && validarGenero(genero)
+        && campoRequerido(genero)
+        && campoRequerido(genero)
+        && validarSoloLetras(calle,4,20)
+        && cantidadCaracteres(nroCalle,0,6)
+        && validarSoloLetras(provincia,4,30) 
+        && validarPais(pais)
+        && cantidadCaracteres(codigoPostal,4,4)
+        && validarClave(clave,clave2)
+        && funclave(clave);
+}
+
+
+function validarUsuarioRepetido(input)
+{
+    let usuarioRepetido = vectorUsuarios.find((item)=>{ return item.usuario == input.value});
+    if (usuarioRepetido == undefined )
+    {
+        input.className = " form-control is-valid";
+        return true;
+    } else {
+        input.className = " form-control is-invalid";
+        return false;
+    }
+}
+
+function validarEmailRepetido(input)
+{
+    let usuarioRepetido = vectorUsuarios.find((item)=>{ return item.email == input.value});
+    if (usuarioRepetido == undefined )
+    {
+        input.className = " form-control is-valid";
+        return true;
+    } else {
+        input.className = " form-control is-invalid";
+        return false;
+    }
+}
 
 function guardarVectorUsuarios()
 {
