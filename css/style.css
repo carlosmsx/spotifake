@@ -305,7 +305,7 @@ a:active {
   color: #2e294e;
 }
 
-.formRegistro option {
+.formRegistro option, #modalCancion option{
   color: black;
 }
 
