@@ -142,7 +142,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main id="bodyIndex">
       <!-- Offcanvas -->
       <section>
         <div
@@ -313,9 +313,9 @@
             </div>
           </section>
           <!-- tarjetas generos -->
-          <section class="container-fluid py-4 bg-dark-transparencia">
-            <article>
-              <h2 class="mss-5 text-light py-4 offcanvasListaSubTitulo">
+          <section class="w-100 py-5 bg-dark-transparencia">
+            <article class="py-20"> 
+              <h2 class="text-light py-4 offcanvasListaSubTitulo">
                 Playlist recomendadas
               </h2>
             </article>
@@ -422,7 +422,7 @@
                         </div>
                         <div class="col-md-8 color-tarjeta">
                           <div class="card-body">
-                            <h5 class="card-title color-texto">Regueton</h5>
+                            <h5 class="card-title color-texto">Reggaeton</h5>
                           </div>
                         </div>
                       </div>
@@ -465,8 +465,8 @@
             ></article>
           </section>
           <!-- fila 2 de canciones  -->
-          <section class="py-20">
-            <h2 class="text-light py-2 offcanvasListaSubTitulo">
+          <section class="py-20 mt-5">
+            <h2 class="text-light py-4 offcanvasListaSubTitulo">
               Hits del momento 2022
             </h2>
             <article class="row py-2 bg-fila-canciones">
@@ -497,7 +497,7 @@
                     />
                     <div class="card-body">
                       <p class="card-text">
-                        Luis Alberto Spinetta - Pelusón of milk (1991)
+                        Luis Alberto Spinetta - Pelusón of Milk (1991)
                       </p>
                     </div>
                   </div>
@@ -556,7 +556,7 @@
                       alt="img-cancion"
                     />
                     <div class="card-body">
-                      <p class="card-text">tini stoessel</p>
+                      <p class="card-text">Tini Stoessel</p>
                     </div>
                   </div>
                 </a>
@@ -566,7 +566,7 @@
           <section class="container-fluid bg-artista-transparencia py-2 my-5">
             <!-- artistas -->
             <article class="padding-tarjetas">
-              <h2 class="display-5 text-center py-5">Artistas</h2>
+              <h2 class="tituloIndex fs-1 text-center py-5">Artistas</h2>
               <article class="container">
                 <div class="row">
                   <div
@@ -632,7 +632,7 @@
           <!-- fila 3 de canciones  -->
           <section class="py-20">
             <h2 class="text-light py-4 offcanvasListaSubTitulo">
-              Nuevos lanzamientos
+              Nuevos mix
             </h2>
             <article class="row py-2 bg-fila-canciones">
               <div class="col-6 col-md-3 col-lg-2 py-3">
@@ -644,7 +644,7 @@
                       alt="img-cancion"
                     />
                     <div class="card-body">
-                      <p class="card-text">Daddy yankee (regueton)</p>
+                      <p class="card-text">Daddy Yankee (Reggaeton)</p>
                     </div>
                   </div>
                 </a>
@@ -658,7 +658,7 @@
                       alt="img-cancion"
                     />
                     <div class="card-body">
-                      <p class="card-text">Bad bunny(regueton)</p>
+                      <p class="card-text">Bad Bunny (Reggaeton)</p>
                     </div>
                   </div>
                 </a>
@@ -686,7 +686,7 @@
                       alt="img-cancion"
                     />
                     <div class="card-body">
-                      <p class="card-text">La konga (mixtos)</p>
+                      <p class="card-text">La Konga (Mixtos)</p>
                     </div>
                   </div>
                 </a>
@@ -700,7 +700,7 @@
                       alt="img-cancion"
                     />
                     <div class="card-body">
-                      <p class="card-text">colpay (this is colplay)</p>
+                      <p class="card-text">Coldplay (This Is Coldplay)</p>
                     </div>
                   </div>
                 </a>
@@ -714,7 +714,7 @@
                       alt="img-cancion"
                     />
                     <div class="card-body">
-                      <p class="card-text">colpay (this is colplay)</p>
+                      <p class="card-text">BIZARRAP - Paulo Londra</p>
                     </div>
                   </div>
                 </a>
@@ -723,33 +723,27 @@
           </section>
           <section class="container">
             <article class="container padding-300 padding-tarjetas">
-              <h2 class="text-center">Probrar SPOTIFAKE ahora</h2>
+              <h2 class="display-4 text-center">Probá Spotifake ahora</h2>
               <h2 class="display-6 text-center">
-                Unite gratis a una comuidad de mas de 2500 artistas
+                Unite gratis a una comunidad de más de 2500 artistas
               </h2>
-              <div class="padding-boton py-4">
-                <a href="">
-                  <div class="py-2 border botonSuscribete rounded-pill">
+              <div class="padding-boton py-5">
+                <a href="pages/registro.html">
+                  <div class="py-2 border botonSuscribete rounded-pill py-3">
                     <!-- registro -->
-                    <h3 class="text-center">Registrese gratiutamente</h3>
+                    <h3 class="text-center m-0">Registrate gratuitamente</h3>
                   </div>
                 </a>
               </div>
             </article>
           </section>
-          <article class="container-fluid py-5">
-            <img
-              src="img/banner/MusicSpotifake.jpg"
-              class="CorregirImg"
-              width="100%"
-              height="100%"
-              alt=""
-            />
-          </article>
+          <section class="w-100">
+            <img src="img/banner/MusicSpotifake.jpg" class="img-fluid" id="imgBanner" alt="Banner Spotifake">
+          </section>
           <section class="container py-20">
             <article class="row py-5">
               <div class="col-12 col-md-6">
-                <h3 class="container">SERVICIOS</h3>
+                <h3 class="container">Servicios</h3>
                 <ul style="list-style-type: circle" class="py-3">
                   <li class="py-2">Tiendas online</li>
                   <li class="py-2">Distribucion digital</li>
@@ -759,16 +753,16 @@
                 </ul>
               </div>
               <div class="container col-12 col-md-6">
-                <h3 class="container">NUEVO</h3>
+                <h3 class="container">Novedades</h3>
                 <p class="container py-4">
-                  Reciba todas las noticias de SPOTIFAKE, nuevos lanzamientos,
+                  Reciba todas las noticias de Spotifake, nuevos lanzamientos,
                   ofertas especiales, directamente en su bandeja de correo
                 </p>
                 <div class="container py-2">
-                  <a href="index.html">
+                  <a href="/pages/registro.html">
                     <div class="py-2 border botonSuscribete rounded-pill">
                       <!-- suscripcion -->
-                      <h3 class="text-center">Suscribete</h3>
+                      <h3 class="text-center m-0">Subscribite</h3>
                     </div>
                   </a>
                 </div>
@@ -782,7 +776,7 @@
     <footer>
       <section class="p-5 mx-0 row d-flex justify-content-center w-100">
         <article class="col-12 col-md-3 text-center">
-          <img src="img/Logo.png" alt="" class="w-50" id="imgLogo" />
+          <img src="img/Logo.png" alt="Logo Spotifake" class="w-50" id="imgLogo" />
         </article>
         <article class="col-12 col-md-3 my-4 my-md-0 text-center">
           <h5>Explorar</h5>

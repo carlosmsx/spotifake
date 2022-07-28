@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
 /*Lista de reproduccion*/
-@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@700&display=swap");
 * {
   font-family: "Inter", sans-serif;
   font-weight: 300;
@@ -95,19 +95,30 @@ footer a:hover,
   background-attachment: fixed;
   background-size: cover;
 }
-.bg-general{
+/* .bg-general{
   background-image: url(../img/listaReproduccion/fondo-degrades.png);
   background-repeat: no-repeat;
   background-position: center center;
-  /* height: 2000px; */
+  /* height: 2000px;
   background-attachment: fixed;
   background-size: cover;
-  background-color:  #05a1ad;
+  background-color:  #05a1ad; */
+/* }  */
+
+.bg-general {
+  background-color: #ff4365;
+  background-image: linear-gradient(
+    62deg,
+    #ff4365 17%,
+    #2e294e 48%,
+    #006d77 80%,
+    #4bc6b9 100%
+  );
 }
-.text-lista-reproduccion{
-  font-family: 'Cuprum', sans-serif;
+.text-lista-reproduccion {
+  font-family: "Cuprum", sans-serif;
   /* font-weight: 700; */
-  font-size: 60px; 
+  font-size: 60px;
 }
 .Banner-index {
   width: 100%;
@@ -118,6 +129,10 @@ footer a:hover,
 .CorregirImg {
   height: 100%;
   object-fit: cover;
+}
+
+#imgBanner{
+  object-fit: fill;
 }
 .color-tarjeta {
   background-color: #05a2ad;
@@ -180,6 +195,11 @@ a:visited,
 a:active {
   text-decoration: none;
 }
+
+.tituloIndex{
+  font-weight: 500;
+}
+
 /* Celulares */
 @media all and (max-width: 760px) {
   .sm-none {
@@ -204,10 +224,9 @@ a:active {
   .mss-5 {
     padding-left: 5px;
   }
-  .mt-sm-40px{
+  .mt-sm-40px {
     padding-top: 40px;
   }
-
 }
 /* clase para filtrar canciones */
 .filtro {
@@ -233,7 +252,7 @@ a:active {
   .mss-5 {
     padding-left: 60px;
   }
-  .pt-85px{
+  .pt-85px {
     padding-top: 100px;
   }
 }
@@ -387,12 +406,11 @@ a:active {
   height: 100%;
   object-fit: cover;
 }
-.color-btn-AgregaCancion{
-  color:   #312d4f86;
+.color-btn-AgregaCancion {
+  color: #312d4f86;
 }
-.color-btn-AgregaCancion:hover{
-  color:#ff4365;
- 
+.color-btn-AgregaCancion:hover {
+  color: #ff4365;
 }
 #botonReproducir {
   background-color: #ff4365;
@@ -403,10 +421,10 @@ a:active {
   background-color: #312d4f;
   border: 2px solid #ff4365;
 }
-.pt-85px{
+.pt-85px {
   padding-top: 85px;
 }
-.pt-40px{
+.pt-40px {
   padding-top: 40px;
 }
 /* modal login */
@@ -414,12 +432,12 @@ a:active {
   color: #312d4f;
 }
 
-.btnModal{
+.btnModal {
   background-color: #ff4365;
   border: 2px solid #ff4365;
 }
 
-.btnModal:hover{
+.btnModal:hover {
   background-color: #312d4f;
   border: 2px solid #312d4f;
 }
