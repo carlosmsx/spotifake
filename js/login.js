@@ -4,7 +4,6 @@ let inputUsuario = document.getElementById("inputUsuario")
 let formLogin = document.getElementById("formLogin")
 let claveLogin = document.getElementById("claveLogin") 
 let usuarioLogin = document.getElementById("usuarioLogin")
-let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
 
 class UsuarioLogin {
     constructor(usuarioLogin, claveLogin){
@@ -16,8 +15,8 @@ class UsuarioLogin {
 formLogin.addEventListener("submit", login);
 
 export function login(e){
-    let inputClave = document.getElementById("inputClave")
     e.preventDefault()
+    let inputClave = document.getElementById("inputClave")
     let usuarioIngresado = new UsuarioLogin(inputUsuario.value, inputClave.value)
     console.log(usuarioIngresado)
     console.log(inputClave.value)
@@ -30,6 +29,7 @@ export function login(e){
             // alert("clave incorrecta");
         }
     }else{
+        let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
         console.log(vectorUsuarios)
         let usuarioEncontrado = vectorUsuarios.find((item)=>{return inputUsuario.value == item.usuario})
         console.log (usuarioEncontrado)
