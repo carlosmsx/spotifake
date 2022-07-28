@@ -16,34 +16,33 @@ export function login(e) {
   let inputClave = document.getElementById("inputClave");
   e.preventDefault();
   let usuarioIngresado = new UsuarioLogin(inputUsuario.value, inputClave.value);
-  console.log(usuarioIngresado);
-  console.log(inputClave.value);
+  
   if (inputUsuario.value == "administrador") {
     if (inputClave.value == "administrador") {
-      // insertar pagina del admin
+      
       window.location = "/pages/administracion.html";
     } else {
       contraseñaIncorrecta();
-      // alert("clave incorrecta");
+      
     }
   } else {
     let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey"));
-    console.log(vectorUsuarios);
+    
     let usuarioEncontrado = vectorUsuarios.find((item) => {
       return inputUsuario.value == item.usuario;
     });
-    console.log(usuarioEncontrado);
+    
     if (usuarioEncontrado != undefined) {
       usuarioLogin.innerHTML = ``;
       if (inputClave.value == usuarioEncontrado.password) {
-        // insertar pagina del usuario
+       
         window.location = "/index.html";
         localStorage.setItem("usuarioActivoKey", usuarioEncontrado.email);
         cambioNav();
-        console.log();
+       
       } else {
         contraseñaIncorrecta();
-        // alert("clave incorrecta");
+        
       }
     } else {
       usuarioNoRegistrado();
@@ -52,7 +51,7 @@ export function login(e) {
 }
 
 function contraseñaIncorrecta() {
-  // e.preventDefault()
+ 
   claveLogin.innerHTML = `<p class="text-danger text-sm">Clave incorrecta</p>`;
 }
 
@@ -63,10 +62,9 @@ function usuarioNoRegistrado() {
 export function cambioNav() {
   let listaNav = document.getElementById("listaNav");
   let usuarioActivo = localStorage.getItem("usuarioActivoKey") || null;
-  console.log("desde cambio nav " + usuarioActivo);
-  console.log(!usuarioActivo);
+  
   if (!usuarioActivo) {
-    console.log("hola");
+    
     listaNav.innerHTML = `
     <li class="nav-item">
                 <a
@@ -102,7 +100,7 @@ export function cambioNav() {
                     data-bs-target="#modalLogin">Iniciar sesión</a></li>
               `;
   } else {
-    console.log("chau");
+    
     listaNav.innerHTML = `
    <li class="nav-item">
                 <a class="nav-link navLista" href="/pages/listaReproduccion.html"
@@ -142,7 +140,7 @@ export function cambioNav() {
 }
 
 export function cerrarSesion() {
-  console.log("cerrar");
+  
   localStorage.removeItem("usuarioActivoKey");
   window.location = "/index.html";
 }

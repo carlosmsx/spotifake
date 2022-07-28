@@ -16,10 +16,9 @@ export class Usuario
         this.canciones = [];
     }
     
-    /****** propiedades *******/
-    //getters
+    
     get getNombre() { return this.nombre; }
-    //usuario
+   
     get getEmail() { return this.email; }
     get getFechaNac() { return this.fechaNac; }
     get getSexo() { return this.sexo; }
@@ -30,9 +29,9 @@ export class Usuario
     get getcodigoPostal() { return this.codigoPostal; }
     get getPassword() { return this.password; }
     get getCanciones() { return this.canciones; }
-    //setters
+    
     set setNombre(value) { this.nombre = value; }
-    //usuario
+    
     set setEmail(value) { this.email = value; }
     set setFechaNac(value) { this.fechaNac = value; }
     set setSexo(value) { this.sexo = value; }

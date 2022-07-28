@@ -2,12 +2,11 @@ import { Usuario } from './usuarioClass.js';
 import {campoRequerido,validarSoloLetras, cantidadCaracteres,validarGmail,validarfechaNacimiento,validarGenero,validarPais,funclave,validarClave,limpiarClaveValidada} from "./validaciones.js";
 import {login} from "./login.js"
 
-//cargar vector usuarios
-let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
+let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; 
 let formLogin = document.getElementById("formLogin")
-let usuarioActivo  = localStorage.getItem("usuarioActivoKey") || null; //carga el usuario logueado
+let usuarioActivo  = localStorage.getItem("usuarioActivoKey") || null; 
 
-//form controls
+
 let nombre = document.getElementById('inputNombre');
 let usuario = document.getElementById('inputUser');
 let gmail = document.getElementById('inputEmail4');
@@ -46,7 +45,7 @@ let formulario = document.getElementById("registro");
 formulario.addEventListener('submit', (e)=>{
     e.preventDefault();
 
-    //validar antes de guardar
+    
     if (validacionGeneral() == false)
         return;
 
@@ -55,13 +54,13 @@ formulario.addEventListener('submit', (e)=>{
         provincia.value, pais.value, codigoPostal.value, clave.value);
     vectorUsuarios.push(nuevoUsuario);
 
-    //Guardar en local storage
+    
     guardarVectorUsuarios();
 
-    //Limpiar formulario
+    
     limpiarFormulario();
 
-    //mostrar el ok
+    
     Swal.fire('Registración exitosa', 'Los datos de usuario se registraron correctamente', 'success');
 });
 
@@ -121,9 +120,8 @@ function guardarVectorUsuarios()
 
 function limpiarFormulario()
 {
-    formulario.reset(); //solo resetea el value de los campos del formulario
-
-    //quitar clases is-valid/is-invalid
+    formulario.reset(); 
+    
     let inputs = formulario.querySelectorAll(".form-control")
     inputs.forEach((item)=>{
         item.className = "form-control";
