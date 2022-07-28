@@ -4,8 +4,8 @@ import {login} from "./login.js"
 
 //cargar vector usuarios
 let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
-let usuarioActivo  = JSON.parse(localStorage.getItem("usuarioActivoKey")) || null; //carga el usuario logueado
 let formLogin = document.getElementById("formLogin")
+let usuarioActivo  = localStorage.getItem("usuarioActivoKey") || null; //carga el usuario logueado
 
 //form controls
 let nombre = document.getElementById('inputNombre');
