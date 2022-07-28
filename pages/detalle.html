@@ -24,14 +24,14 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="#" />
     <title>Detalle</title>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">
+          <a class="navbar-brand" href="/index.html">
             <img
               src="../img/Logo.png"
               alt="Logo Spotifake"
@@ -53,67 +53,16 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link navLista" href="../index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link navLista"
-                  data-bs-toggle="offcanvas"
-                  href="#offcanvasExplorar"
-                  role="button"
-                  aria-controls="offcanvasExplorar"
-                >
-                  Descubrí
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista" href="acercade.html">Acerca de</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista" href="registro.html">Registro</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista" data-bs-toggle="modal"
-                    data-bs-target="#modalLogin">Iniciar sesión</a></li>
-              </li>
-              <!-- <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle navLista"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Iniciar sesión
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdown"
-                  id="navDropdown"
-                >
-                  <li><a class="dropdown-item" data-bs-toggle="modal"
-                    data-bs-target="#modalLogin">Usuario</a></li>
-                  <li>
-                    <a class="dropdown-item" href="pages/administracion.html"
-                      >Administrador</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="pages/error404.html"
-                      >Cerrar sesión</a
-                    >
-                  </li>
-                </ul>
-              </li> -->
-            </ul>
+            <ul
+              class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 justify-content-end w-100"
+              id="listaNav"
+            ></ul>
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
                 type="search"
+                id="buscador"
+                name="buscador"
                 placeholder="Buscar canción"
                 aria-label="Search"
               />
@@ -287,22 +236,32 @@
           </div>
           <div class="modal-body">
             <form id="formLogin">
-                <div class="mb-3">
-                  <label for="inputUsuario" class="form-label textoModal">Usuario</label>
-                  <input type="text" class="form-control" id="inputUsuario" aria-describedby="emailHelp">
-                  <p id="usuarioLogin"></p>
-                </div>
-                <div class="mb-3">
-                  <label for="inputClave" class="form-label textoModal">Clave</label>
-                  <input type="password" class="form-control" id="inputClave">
-                  <p id="claveLogin"></p>
-                </div>
-                
-                <button type="submit" class="btn btnModal">Iniciar sesión</button>
-                <a href="/pages/registro.html" class="btn btnModal">Registrarse</a>
-              </form>
+              <div class="mb-3">
+                <label for="inputUsuario" class="form-label textoModal"
+                  >Usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputUsuario"
+                  aria-describedby="emailHelp"
+                />
+                <p id="usuarioLogin"></p>
+              </div>
+              <div class="mb-3">
+                <label for="inputClave" class="form-label textoModal"
+                  >Clave</label
+                >
+                <input type="password" class="form-control" id="inputClave" />
+                <p id="claveLogin"></p>
+              </div>
+
+              <button type="submit" class="btn btnModal">Iniciar sesión</button>
+              <a href="/pages/registro.html" class="btn btnModal"
+                >Registrarse</a
+              >
+            </form>
           </div>
-          
         </div>
       </div>
     </div>

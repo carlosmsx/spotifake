@@ -19,8 +19,8 @@ export function login(e) {
 
   if (inputUsuario.value == "administrador") {
     if (inputClave.value == "administrador") {
-      localStorage.setItem("usuarioActivoKey", "admin");
-      cambioNav();
+      // localStorage.setItem("usuarioActivoKey", "admin");
+      // cambioNav();
       window.location = "/pages/administracion.html";
     } else {
       contraseñaIncorrecta();
@@ -63,8 +63,7 @@ export function cambioNav() {
     listaNav.innerHTML = `
     <li class="nav-item">
                 <a
-                  class="nav-link navLista active"
-                  aria-current="page"
+                  class="nav-link navLista"
                   href="/index.html"
                   >Inicio</a
                 >
@@ -95,17 +94,26 @@ export function cambioNav() {
                     data-bs-target="#modalLogin">Iniciar sesión</a></li>
               `;
   } else {
+    let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey"));
+    let usuarioEncontrado = vectorUsuarios.find((item) => {
+      return usuarioActivo == item.email;
+    });
     listaNav.innerHTML = `
-   <li class="nav-item">
-                <a class="nav-link navLista" href="/pages/listaReproduccion.html"
+    <li class="nav-item me-auto">
+    <a
+      class="nav-link navLista disabled text-light"
+      href="#"
+      >Hola, ${usuarioEncontrado.nombre} </a
+    >
+    </li>
+              <li class="nav-item">
+              <a class="nav-link navLista me-0" href="/pages/listaReproduccion.html"
                   >Mis canciones</a
-                >
+              >
               </li>
-  <li class="nav-item">
-  
+              <li class="nav-item">
                 <a
-                  class="nav-link navLista active"
-                  aria-current="page"
+                  class="nav-link navLista"
                   href="/index.html"
                   >Inicio</a
                 >
