@@ -22,19 +22,29 @@ let indiceUsuario = listaUsuarios.findIndex((usuario) => {
   return usuario.email == usuarioActivo;
 });
 
-let indiceCancion = listaUsuarios[indiceUsuario].canciones.findIndex((cancion) => {
-    return cancion.codigo == cancionAgregada.codigo;
-  });
+if (usuarioActivo != null)
+{
+    let indiceUsuario = listaUsuarios.findIndex((usuario) => {
+        return usuario.email == usuarioActivo;
+    });
 
-if(indiceCancion == -1){
-    listaUsuarios[indiceUsuario].canciones.push(cancionAgregada);
+    if (cancionAgregada != undefined)
+    {
+        let indiceCancion = listaUsuarios[indiceUsuario].canciones.findIndex((cancion) => {
+            return cancion.codigo == cancionAgregada.codigo;
+        });
+        
+        if(indiceCancion == -1){
+            listaUsuarios[indiceUsuario].canciones.push(cancionAgregada);
+        }
+        
+        localStorage.setItem('vectorUsuariosKey',JSON.stringify(listaUsuarios));
+    }
+    
+    listaUsuarios[indiceUsuario].canciones.forEach(cancion => {
+        crearMiLista(cancion);
+    });
 }
-
-localStorage.setItem('vectorUsuariosKey',JSON.stringify(listaUsuarios));
-
-listaUsuarios[indiceUsuario].canciones.forEach(cancion => {
-    crearMiLista(cancion);
-});
 
 function crearMiLista(cancion){
   let newRow = 
