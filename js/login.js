@@ -1,11 +1,7 @@
-import { Usuario } from "./usuarioClass.js";
-
 let inputUsuario = document.getElementById("inputUsuario");
 let formLogin = document.getElementById("formLogin");
 let claveLogin = document.getElementById("claveLogin");
 let usuarioLogin = document.getElementById("usuarioLogin");
-let vectorUsuarios =
-  JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
 
 class UsuarioLogin {
   constructor(usuarioLogin, claveLogin) {
@@ -31,6 +27,7 @@ export function login(e) {
       // alert("clave incorrecta");
     }
   } else {
+    let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey"));
     console.log(vectorUsuarios);
     let usuarioEncontrado = vectorUsuarios.find((item) => {
       return inputUsuario.value == item.usuario;
@@ -75,7 +72,7 @@ export function cambioNav() {
                 <a
                   class="nav-link navLista active"
                   aria-current="page"
-                  href="index.html"
+                  href="/index.html"
                   >Inicio</a
                 >
               </li>
@@ -91,12 +88,12 @@ export function cambioNav() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navLista" href="pages/acercade.html"
+                <a class="nav-link navLista" href="/pages/acercade.html"
                   >Acerca de</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link navLista" href="pages/registro.html"
+                <a class="nav-link navLista" href="/pages/registro.html"
                   >Registro</a
                 >
               </li>
@@ -107,11 +104,17 @@ export function cambioNav() {
   } else {
     console.log("chau");
     listaNav.innerHTML = `
+   <li class="nav-item">
+                <a class="nav-link navLista" href="/pages/listaReproduccion.html"
+                  >Mis canciones</a
+                >
+              </li>
   <li class="nav-item">
+  
                 <a
                   class="nav-link navLista active"
                   aria-current="page"
-                  href="index.html"
+                  href="/index.html"
                   >Inicio</a
                 >
               </li>
@@ -127,10 +130,11 @@ export function cambioNav() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navLista" href="pages/acercade.html"
+                <a class="nav-link navLista" href="/pages/acercade.html"
                   >Acerca de</a
                 >
               </li>
+              
               <li class="nav-item">
                 <a class="nav-link navLista" onclick="cerrarSesion()">Cerrar sesión</a></li>
               </li>`;
@@ -140,5 +144,5 @@ export function cambioNav() {
 export function cerrarSesion() {
   console.log("cerrar");
   localStorage.removeItem("usuarioActivoKey");
-  window.location = "index.html";
+  window.location = "/index.html";
 }

@@ -52,11 +52,11 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
-              <li class="nav-item">
+            <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0" id="listaNav">
+              <!-- <li class="nav-item">
                 <a class="nav-link navLista" href="../index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
+              </li> -->
+              <!-- <li class="nav-item">
                 <a
                   class="nav-link navLista"
                   data-bs-toggle="offcanvas"
@@ -66,8 +66,8 @@
                 >
                   Descubrí
                 </a>
-              </li>
-              <li class="nav-item">
+              </li> -->
+              <!-- <li class="nav-item">
                 <a class="nav-link navLista" href="acercade.html">Acerca de</a>
               </li>
               <li class="nav-item">
@@ -76,8 +76,8 @@
               <li class="nav-item">
                 <a class="nav-link navLista" data-bs-toggle="modal"
                     data-bs-target="#modalLogin">Iniciar sesión</a></li>
-              </li>
-              <li class="nav-item dropdown">
+              </li> -->
+              <!-- <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle navLista"
                   href="#"
@@ -107,7 +107,7 @@
                     >
                   </li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
             <form class="d-flex" role="search">
               <input
@@ -259,22 +259,32 @@
           </div>
           <div class="modal-body">
             <form id="formLogin">
-                <div class="mb-3">
-                  <label for="inputUsuario" class="form-label textoModal">Usuario</label>
-                  <input type="text" class="form-control" id="inputUsuario" aria-describedby="emailHelp">
-                  <p id="usuarioLogin"></p>
-                </div>
-                <div class="mb-3">
-                  <label for="inputClave" class="form-label textoModal">Clave</label>
-                  <input type="password" class="form-control" id="inputClave">
-                  <p id="claveLogin"></p>
-                </div>
-                
-                <button type="submit" class="btn btnModal">Iniciar sesión</button>
-                <a href="pages/registro.html" class="btn btnModal">Registrarse</a>
-              </form>
+              <div class="mb-3">
+                <label for="inputUsuario" class="form-label textoModal"
+                  >Usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputUsuario"
+                  aria-describedby="emailHelp"
+                />
+                <p id="usuarioLogin"></p>
+              </div>
+              <div class="mb-3">
+                <label for="inputClave" class="form-label textoModal"
+                  >Clave</label
+                >
+                <input type="password" class="form-control" id="inputClave" />
+                <p id="claveLogin"></p>
+              </div>
+
+              <button type="submit" class="btn btnModal">Iniciar sesión</button>
+              <a href="/pages/registro.html" class="btn btnModal"
+                >Registrarse</a
+              >
+            </form>
           </div>
-          
         </div>
       </div>
     </div>
@@ -284,6 +294,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/app.js" type="module"></script>
+    <script src="/js/modalLogin.js" type="module"></script>
   </body>
 </html>
