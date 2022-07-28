@@ -28,6 +28,16 @@ footer,
   border: 0;
 }
 
+nav .navbar-toggler {
+  border: 2px solid #ff4365;
+  background-color: #ff4365;
+}
+
+nav .navbar-toggler:hover {
+  border: 2px solid #05a1ad;
+  background-color: #05a1ad;
+}
+
 #navDropdown {
   background-color: #05a1ad;
 }
