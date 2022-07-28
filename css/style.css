@@ -98,7 +98,6 @@ footer a:hover,
   background-color: #5a4c6e;
 }
 
-
 /* Pagina principal */
 
 .img-principal {
@@ -147,7 +146,7 @@ footer a:hover,
   object-fit: cover;
 }
 
-#imgBanner{
+#imgBanner {
   object-fit: fill;
 }
 .color-tarjeta {
@@ -212,7 +211,7 @@ a:active {
   text-decoration: none;
 }
 
-.tituloIndex{
+.tituloIndex {
   font-weight: 500;
 }
 
@@ -391,11 +390,11 @@ a:active {
 /* Pagina de detalle */
 
 #mainDetalle {
-  background-color: #006d77;
+  background-color: #5a4c6e;
 }
 
 #breadcrumb {
-  background-color: #006d77;
+  background-color: #5a4c6e;
 }
 
 #breadcrumb li {
@@ -413,6 +412,7 @@ a:active {
 }
 
 .tarjetaDetalle {
+  min-height: 400px;
   max-height: 1000px;
   overflow: hidden;
 }
