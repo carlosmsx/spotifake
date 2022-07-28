@@ -1,7 +1,7 @@
 import {Cancion} from './cancionClass.js';
 import { campoRequerido, cantidadCaracteres, validarUrl } from "./validaciones.js";
 import { getUniqueId } from './guid.js';
-import {login} from "./login.js"
+import {login, cambioNav, cerrarSesion} from "./login.js"
 
 
 let vectorCanciones = JSON.parse(localStorage.getItem("vectorCancionesKey")) || []; 
@@ -22,7 +22,7 @@ let btnCrearCancion = document.getElementById("btnCrearCancion")
 let tablaCanciones = document.getElementById("tablaCanciones")
 let tablaUsuarios = document.getElementById("tablaUsuarios")
 
-
+cambioNav();
 
 btnCrearCancion.addEventListener("click", ()=>{
     limpiarFormulario();
@@ -265,7 +265,12 @@ function guardarEdicionCancion()
     modalAdminCancion.hide();
 }
 
-
+window.cerrarSesion = () => {
+    cerrarSesion();
+  };
+  
+  formLogin.addEventListener("submit", login);
+  
 
 
 
