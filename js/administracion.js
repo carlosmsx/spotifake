@@ -3,12 +3,9 @@ import { campoRequerido, cantidadCaracteres, validarUrl } from "./validaciones.j
 import { getUniqueId } from './guid.js';
 import {login} from "./login.js"
 
-//si hay algo en localstorage traer los datos, si no crear el arreglo vacio
-let vectorCanciones = JSON.parse(localStorage.getItem("vectorCancionesKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
-let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || []; //se usa el operador OR para cuando el primer valor sea nulo use el segundo valor
-console.log(vectorUsuarios)
 
-//traemos los elementos que nos interesen
+let vectorCanciones = JSON.parse(localStorage.getItem("vectorCancionesKey")) || []; 
+let vectorUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || [];
 
 let codigo = document.getElementById("codigo")
 let titulo = document.getElementById("titulo")
@@ -33,7 +30,7 @@ btnCrearCancion.addEventListener("click", ()=>{
     editando = false;
     modalAdminCancion.show();
 })
-//eventos de validaciones
+
 codigo.addEventListener("blur", ()=>{ campoRequerido(codigo); });
 codigo.addEventListener("keyDown", ()=>{ cantidadCaracteres(codigo, 1, 5); });
 
@@ -65,7 +62,7 @@ cargarUsuarios()
 function guardarCancion(e)
 {
     e.preventDefault();
-    //TODO: volver a validar todos los campos
+    
     if (editando)
     {
         guardarEdicionCancion();
@@ -80,23 +77,21 @@ function crearCancion()
 {
     let nuevaCancion = new Cancion(codigo.value, titulo.value, artista.value, categoria.value, imagen.value, duracion.value, cancion.value);
     vectorCanciones.push(nuevaCancion);
-    //limpiar el formulario
+    
     limpiarFormulario();
-    //guardar la lista de Canciones
+    
     guardarListaCanciones();
-    //cerrar modal
+    
     modalAdminCancion.hide();
-    //agrgar fila a tabla
+    
     renderFilaCancion(nuevaCancion);
-    //mostrar el ok
+    
     Swal.fire('Cancion creada', 'La cancion fue creada correctamente', 'success');
 }
 
 function limpiarFormulario()
 {
-    formulario.reset(); //solo resetea el value de los campos del formulario
-
-    //quitar clases is-valid/is-invalid
+    formulario.reset(); 
     let inputs = formulario.querySelectorAll(".form-control")
     inputs.forEach((item)=>{
         item.className = "form-control";
@@ -253,20 +248,20 @@ window.modificarCancion = (codigoCancion)=>
 function guardarEdicionCancion()
 {
     let index = vectorCanciones.findIndex((cancion)=>{return cancion.codigo == codigo.value; });
-    //actualizar elemento del vector
+    
     vectorCanciones[index].titulo = titulo.value;
     vectorCanciones[index].artista = artista.value;
     vectorCanciones[index].categoria = categoria.value;
     vectorCanciones[index].imagen = imagen.value;
     vectorCanciones[index].duracion = duracion.value;
     vectorCanciones[index].cancion = cancion.value;
-    //guardar en localstorage
+    
     guardarListaCanciones();
-    //actualizar la tabla
+    
     actualizarTabla();
-    //indicar al usuario
+    
     Swal.fire('Cancion actualizada', 'La cancion fue actualizada correctamente', 'success')
-    //cerrar ventana modal
+    
     modalAdminCancion.hide();
 }
 

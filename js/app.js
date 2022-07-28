@@ -5,8 +5,6 @@ let listaCanciones =
 cargaTarjetas();
 const formLogin = document.getElementById("formLogin");
 
-// Si hay datos dibujar las cards
-
 function cargaTarjetas() {
   listaCanciones.forEach((cancion) => {
     crearTarjeta(cancion);
@@ -15,7 +13,7 @@ function cargaTarjetas() {
 
 cambioNav();
 
-//onclick="verDetalle(${cancion.codigo})"
+
 function crearTarjeta(cancion) {
   let seccionCanciones = document.getElementById("seccionCanciones");
   seccionCanciones.innerHTML += `
@@ -48,15 +46,14 @@ function crearTarjeta(cancion) {
 }
 //
 window.agregarCancion = (codigo) => {
-  console.log(codigo);
+  
   window.location.href =
     window.location.origin + `/pages/listaReproduccion.html?codigo=${codigo}`;
 };
 
 //
 window.verDetalle = (codigo) => {
-  console.log(codigo);
-  console.log(window.location.origin + `/pages/detalle.html`);
+  
   window.location.href =
     window.location.origin + `/pages/detalle.html?codigo=${codigo}`;
 };

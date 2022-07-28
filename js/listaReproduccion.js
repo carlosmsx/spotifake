@@ -12,12 +12,12 @@ let cancionAgregada = listaCanciones.find((cancion) => {
   return cancion.codigo == urlParam.get("codigo");
 });
 
-console.log(cancionAgregada);
+
 
 let listaUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || [];
  
 let usuarioActivo = localStorage.getItem('usuarioActivoKey') || 'nico@gmail.com';
-console.log(usuarioActivo);
+
 let indiceUsuario = listaUsuarios.findIndex((usuario) => {
   return usuario.email == usuarioActivo;
 });
@@ -53,7 +53,7 @@ function crearMiLista(cancion){
 
   tablaMiListaCanciones.innerHTML += newRow;
 }
-// borramos la cancion
+
 window.borrarCancion = function(codigo)
 {
     Swal.fire({
@@ -102,4 +102,3 @@ function cargarMisCanciones()
     }
 }
 formLogin.addEventListener("submit", login);
-// fin nico
