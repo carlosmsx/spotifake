@@ -52,30 +52,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0" id="listaNav">
               <li class="nav-item">
                 <a class="nav-link navLista" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link navLista"
-                  data-bs-toggle="offcanvas"
-                  href="#offcanvasExplorar"
-                  role="button"
-                  aria-controls="offcanvasExplorar"
+                  class="nav-link navLista active"
+                  aria-current="page"
+                  href="acercade.html"
+                  >Acerca de</a
                 >
-                  Descubrí
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista active" aria-current="page" href="acercade.html">Acerca de</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista" href="registro.html">Registro</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista" data-bs-toggle="modal"
-                    data-bs-target="#modalLogin">Iniciar sesión</a></li>
               </li>
               <!-- <li class="nav-item dropdown">
                 <a
@@ -210,7 +197,7 @@
           </div>
         </div>
       </section>
-      <section class="bg-general p-5 text-center">
+      <section class="fondoCeleste p-5 text-center">
         <article>
           <h1>Acerca de nosotros</h1>
           <hr />
@@ -316,22 +303,32 @@
           </div>
           <div class="modal-body">
             <form id="formLogin">
-                <div class="mb-3">
-                  <label for="inputUsuario" class="form-label textoModal">Usuario</label>
-                  <input type="text" class="form-control" id="inputUsuario" aria-describedby="emailHelp">
-                  <p id="usuarioLogin"></p>
-                </div>
-                <div class="mb-3">
-                  <label for="inputClave" class="form-label textoModal">Clave</label>
-                  <input type="password" class="form-control" id="inputClave">
-                  <p id="claveLogin"></p>
-                </div>
-                
-                <button type="submit" class="btn btnModal">Iniciar sesión</button>
-                <a href="/pages/registro.html" class="btn btnModal">Registrarse</a>
-              </form>
+              <div class="mb-3">
+                <label for="inputUsuario" class="form-label textoModal"
+                  >Usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputUsuario"
+                  aria-describedby="emailHelp"
+                />
+                <p id="usuarioLogin"></p>
+              </div>
+              <div class="mb-3">
+                <label for="inputClave" class="form-label textoModal"
+                  >Clave</label
+                >
+                <input type="password" class="form-control" id="inputClave" />
+                <p id="claveLogin"></p>
+              </div>
+
+              <button type="submit" class="btn btnModal">Iniciar sesión</button>
+              <a href="/pages/registro.html" class="btn btnModal"
+                >Registrarse</a
+              >
+            </form>
           </div>
-          
         </div>
       </div>
     </div>
