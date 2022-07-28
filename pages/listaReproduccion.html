@@ -39,7 +39,7 @@ cualquier momento por el usuario, el cual además podría eliminar una canción 
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">
+          <a class="navbar-brand" href="/index.html">
             <img
               src="../img/Logo.png"
               alt="Logo Spotifake"
@@ -61,71 +61,16 @@ cualquier momento por el usuario, el cual además podría eliminar una canción 
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link navLista" href="../index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link navLista"
-                  data-bs-toggle="offcanvas"
-                  href="#offcanvasExplorar"
-                  role="button"
-                  aria-controls="offcanvasExplorar"
-                >
-                  Descubrí
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista" href="acercade.html">Acerca de</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link navLista active"
-                  aria-current="page"
-                  href="registro.html"
-                  >Registro</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista" data-bs-toggle="modal"
-                    data-bs-target="#modalLogin">Iniciar sesión</a></li>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle navLista"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Iniciar sesión
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdown"
-                  id="navDropdown"
-                >
-                  <li><a class="dropdown-item" href="#">Usuario</a></li>
-                  <li>
-                    <a class="dropdown-item" href="administracion.html"
-                      >Administrador</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="error404.html"
-                      >Cerrar sesión</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <ul
+              class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 justify-content-end w-100"
+              id="listaNav"
+            ></ul>
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
                 type="search"
+                id="buscador"
+                name="buscador"
                 placeholder="Buscar canción"
                 aria-label="Search"
               />
@@ -135,7 +80,7 @@ cualquier momento por el usuario, el cual además podría eliminar una canción 
         </div>
       </nav>
     </header>
-    <main class="bg-general">
+    <main id="mainLista">
       <section>
         <div
           class="offcanvas offcanvas-start"
@@ -223,52 +168,54 @@ cualquier momento por el usuario, el cual además podría eliminar una canción 
           </div>
         </div>
       </section>
-      <article class=" container py-5">
+      <article class="container py-5">
         <div class="row">
           <div class="col-12 col-md-5 col-lg-4">
-            <div class="card bg-dark ">
-              <img src="../img/listaReproduccion/logo-spotifake.png" class="card-img" alt="...">
+            <div>
+              <img
+                src="../img/listaReproduccion/Tocadiscos.jpeg"
+                class="img-fluid rounded-2"
+                alt="Logo Spotifake"
+              />
             </div>
           </div>
           <div class="col-0 col-md-7 col-lg-8 mt-sm-40px">
             <h6 class="py-1">PLAYLIST PUBLICA</h6>
-            <p class="text-lista-reproduccion">Mi lista de reproduccion</p>
-            <h5 class="text-secondary">Nueva playlist</h5>
-             <p class="text-secondary">Almacena aqui todo eso que queres sentir</p>
-             <h6 class="text-secondary">SPOTIFAKE</h6>
-          </div> 
-
+            <p class="text-lista-reproduccion">Mi lista de reproducción</p>
+            <h5 class="text-light">Nueva playlist</h5>
+            <p class="text-light">
+              Almacena aquí todo eso que queres sentir
+            </p>
+            <h6 class="text-light">Spotifake</h6>
+          </div>
         </div>
       </article>
-    
-      <!-- inicio registro -->
-      <section class=" py-5">
-        <section class="bg-dark-transparencia p-5">
-            <h4>Lista de canciones</h4>
-            <section class="mt-5">
-                <hr />
-                <article class="table-responsive">
-                    <table class="table text-start adminBorder">
-                        <thead>
-                            <tr>
-                        
-                                <th scope="col">Título</th>
-                                <th scope="col">Artista</th>
-                                <th scope="col">Categoría</th>
-                                <th scope="col">Imagen</th>
-                                <th scope="col">Duración</th>
-                                <th scope="col">Canción</th>
-                                <th scope="col">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tablaMiListaCanciones">
-                        </tbody>
-                    </table>
-                </article>
-            </section>
-          </section> 
-      </section>
 
+      <!-- inicio registro -->
+      <section class="py-5">
+        <section class="bg-dark-transparencia p-5">
+          <h4>Lista de canciones</h4>
+          <section class="mt-5">
+            <hr />
+            <article class="table-responsive">
+              <table class="table text-start adminBorder">
+                <thead>
+                  <tr>
+                    <th scope="col">Título</th>
+                    <th scope="col">Artista</th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Duración</th>
+                    <th scope="col">Canción</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tablaMiListaCanciones"></tbody>
+              </table>
+            </article>
+          </section>
+        </section>
+      </section>
     </main>
     <footer>
       <section class="p-5 mx-0 row d-flex justify-content-center w-100">
@@ -315,22 +262,32 @@ cualquier momento por el usuario, el cual además podría eliminar una canción 
           </div>
           <div class="modal-body">
             <form id="formLogin">
-                <div class="mb-3">
-                  <label for="inputUsuario" class="form-label textoModal">Usuario</label>
-                  <input type="text" class="form-control" id="inputUsuario" aria-describedby="emailHelp">
-                  <p id="usuarioLogin"></p>
-                </div>
-                <div class="mb-3">
-                  <label for="inputClave" class="form-label textoModal">Clave</label>
-                  <input type="password" class="form-control" id="inputClave">
-                  <p id="claveLogin"></p>
-                </div>
-                
-                <button type="submit" class="btn btnModal">Iniciar sesión</button>
-                <a href="/pages/registro.html" class="btn btnModal">Registrarse</a>
-              </form>
+              <div class="mb-3">
+                <label for="inputUsuario" class="form-label textoModal"
+                  >Usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputUsuario"
+                  aria-describedby="emailHelp"
+                />
+                <p id="usuarioLogin"></p>
+              </div>
+              <div class="mb-3">
+                <label for="inputClave" class="form-label textoModal"
+                  >Clave</label
+                >
+                <input type="password" class="form-control" id="inputClave" />
+                <p id="claveLogin"></p>
+              </div>
+
+              <button type="submit" class="btn btnModal">Iniciar sesión</button>
+              <a href="/pages/registro.html" class="btn btnModal"
+                >Registrarse</a
+              >
+            </form>
           </div>
-          
         </div>
       </div>
     </div>
@@ -340,5 +297,6 @@ cualquier momento por el usuario, el cual además podría eliminar una canción 
       crossorigin="anonymous"
     ></script>
     <script src="../js/listaReproduccion.js" type="module"></script>
+    <script src="../js/modalLogin.js" type="module"></script>
   </body>
 </html>

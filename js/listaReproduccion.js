@@ -12,29 +12,33 @@ let cancionAgregada = listaCanciones.find((cancion) => {
   return cancion.codigo == urlParam.get("codigo");
 });
 
-console.log(cancionAgregada);
-
 let listaUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || [];
  
-let usuarioActivo = localStorage.getItem('usuarioActivoKey') || 'nico@gmail.com';
-console.log(usuarioActivo);
-let indiceUsuario = listaUsuarios.findIndex((usuario) => {
-  return usuario.email == usuarioActivo;
-});
+let usuarioActivo = localStorage.getItem('usuarioActivoKey') || null;
 
-let indiceCancion = listaUsuarios[indiceUsuario].canciones.findIndex((cancion) => {
-    return cancion.codigo == cancionAgregada.codigo;
-  });
+if (usuarioActivo != null)
+{
+    let indiceUsuario = listaUsuarios.findIndex((usuario) => {
+        return usuario.email == usuarioActivo;
+    });
 
-if(indiceCancion == -1){
-    listaUsuarios[indiceUsuario].canciones.push(cancionAgregada);
+    if (cancionAgregada != undefined)
+    {
+        let indiceCancion = listaUsuarios[indiceUsuario].canciones.findIndex((cancion) => {
+            return cancion.codigo == cancionAgregada.codigo;
+        });
+        
+        if(indiceCancion == -1){
+            listaUsuarios[indiceUsuario].canciones.push(cancionAgregada);
+        }
+        
+        localStorage.setItem('vectorUsuariosKey',JSON.stringify(listaUsuarios));
+    }
+    
+    listaUsuarios[indiceUsuario].canciones.forEach(cancion => {
+        crearMiLista(cancion);
+    });
 }
-
-localStorage.setItem('vectorUsuariosKey',JSON.stringify(listaUsuarios));
-
-listaUsuarios[indiceUsuario].canciones.forEach(cancion => {
-    crearMiLista(cancion);
-});
 
 function crearMiLista(cancion){
   let newRow = 

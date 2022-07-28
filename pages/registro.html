@@ -34,7 +34,7 @@
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">
+          <a class="navbar-brand" href="/index.html">
             <img
               src="../img/Logo.png"
               alt="Logo Spotifake"
@@ -56,72 +56,16 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link navLista" href="../index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link navLista"
-                  data-bs-toggle="offcanvas"
-                  href="#offcanvasExplorar"
-                  role="button"
-                  aria-controls="offcanvasExplorar"
-                >
-                  Descubrí
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista" href="acercade.html">Acerca de</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link navLista active"
-                  aria-current="page"
-                  href="registro.html"
-                  >Registro</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navLista" data-bs-toggle="modal"
-                    data-bs-target="#modalLogin">Iniciar sesión</a></li>
-              </li>
-              <!-- <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle navLista"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Iniciar sesión
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdown"
-                  id="navDropdown"
-                >
-                  <li><a class="dropdown-item" data-bs-toggle="modal"
-                    data-bs-target="#modalLogin">Usuario</a></li>
-                  <li>
-                    <a class="dropdown-item" href="pages/administracion.html"
-                      >Administrador</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="pages/error404.html"
-                      >Cerrar sesión</a
-                    >
-                  </li>
-                </ul>
-              </li> -->
-            </ul>
+            <ul
+              class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 justify-content-end w-100"
+              id="listaNav"
+            ></ul>
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
                 type="search"
+                id="buscador"
+                name="buscador"
                 placeholder="Buscar canción"
                 aria-label="Search"
               />
@@ -131,7 +75,7 @@
         </div>
       </nav>
     </header>
-    <main class="bg-general">
+    <main class="fondoAzul">
       <section>
         <div
           class="offcanvas offcanvas-start"
@@ -233,7 +177,6 @@
         <hr />
         <article class="formRegistro">
           <form class="row g-3" id="registro">
-
             <div class="col-12">
               <label for="inputNombre" class="form-label"
                 >Nombre y Apellido</label
@@ -253,24 +196,22 @@
             </div>
 
             <div class="col-md-6">
-              <label for="inputUser" class="form-label"
-                >Usuario</label
-              >
+              <label for="inputUser" class="form-label">Usuario</label>
               <div class="input-group">
                 <span class="input-group-text" id="basic-addon1">@</span>
                 <input
-                type="text"
-                class="form-control input-group-append"
-                placeholder="usuario"
-                id="inputUser"
-                minlength="4"
-                maxlength="8"
-                required
+                  type="text"
+                  class="form-control input-group-append"
+                  placeholder="usuario"
+                  id="inputUser"
+                  minlength="4"
+                  maxlength="8"
+                  required
                 />
               </div>
-                <div class="invalid-feedback fw-bold">
-                  Introducir entre 4 y 8 caracteres
-                </div>
+              <div class="invalid-feedback fw-bold">
+                Introducir entre 4 y 8 caracteres
+              </div>
             </div>
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
@@ -286,7 +227,7 @@
               <div class="invalid-feedback fw-bold">
                 Email mínimo 14 caracteres, incluir @ y un punto
               </div>
-          </div>
+            </div>
             <div class="col-md-4">
               <label for="inputFechaNac" class="form-label"
                 >Fecha de nacimiento</label
@@ -299,17 +240,18 @@
                 required
               />
               <div class="invalid-feedback fw-bold">
-                Ingrese una fecha válida con formato DD/MM/AAAA, entre 1930 y 2004
+                Ingrese una fecha válida con formato DD/MM/AAAA, entre 1930 y
+                2004
               </div>
             </div>
             <div class="col-md-4">
               <label for="inputSexo" class="form-label">Género</label>
               <select id="inputSexo" class="form-control" required>
-                  <option value="">Seleccione una opcion</option> 
-                  <option value="1">Hombre</option>
-                  <option value="2">Mujer</option>
-                  <option value="3">No binario</option>
-                  <option value="4">Otro</option>
+                <option value="">Seleccione una opcion</option>
+                <option value="1">Hombre</option>
+                <option value="2">Mujer</option>
+                <option value="3">No binario</option>
+                <option value="4">Otro</option>
               </select>
             </div>
             <div class="col-md-4">
@@ -323,9 +265,7 @@
                 maxlength="25"
                 required
               />
-              <div class="invalid-feedback fw-bold">
-                Introducir solo letras
-              </div>
+              <div class="invalid-feedback fw-bold">Introducir solo letras</div>
             </div>
             <div class="col-md-2">
               <label for="inputDireccionNro" class="form-label">Número</label>
@@ -352,9 +292,7 @@
                 maxlength="25"
                 required
               />
-              <div class="invalid-feedback fw-bold">
-                Introducir solo letras
-              </div>
+              <div class="invalid-feedback fw-bold">Introducir solo letras</div>
             </div>
             <div class="col-md-4">
               <label for="inputPais" class="form-label">País</label>
@@ -617,9 +555,7 @@
                 id="inputCP"
                 placeholder="4000"
               />
-              <div class="invalid-feedback fw-bold">
-                ingrese 4 dígitos.
-              </div>
+              <div class="invalid-feedback fw-bold">ingrese 4 dígitos.</div>
             </div>
             <div class="col-md-6">
               <label for="inputPassword" class="form-label">Contraseña</label>
@@ -632,7 +568,8 @@
                 required
               />
               <div class="invalid-feedback fw-bold">
-                Introducir entre 8 y 15 caracteres con al menos una letra minúscula, una mayúscula, un digito y un caracter especial.
+                Introducir entre 8 y 15 caracteres con al menos una letra
+                minúscula, una mayúscula, un digito y un caracter especial.
               </div>
             </div>
             <div class="col-md-6">
@@ -647,9 +584,7 @@
                 maxlength="15"
                 required
               />
-              <div class="invalid-feedback fw-bold">
-                Contraseña incorrecta.
-              </div>
+              <div class="invalid-feedback fw-bold">Contraseña incorrecta.</div>
             </div>
             <div class="col-12 text-center mt-4">
               <button type="submit" class="btn" id="btnRegistrarme">
@@ -676,7 +611,6 @@
           <ul class="list-unstyled text-center my-0">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="acercade.html">Quienes somos</a></li>
-            <li><a href="administracion.html">Administracion</a></li>
             <li><a href="registro.html">Registro</a></li>
           </ul>
         </article>
@@ -705,22 +639,32 @@
           </div>
           <div class="modal-body">
             <form id="formLogin">
-                <div class="mb-3">
-                  <label for="inputUsuario" class="form-label textoModal">Usuario</label>
-                  <input type="text" class="form-control" id="inputUsuario" aria-describedby="emailHelp">
-                  <p id="usuarioLogin"></p>
-                </div>
-                <div class="mb-3">
-                  <label for="inputClave" class="form-label textoModal">Clave</label>
-                  <input type="password" class="form-control" id="inputClave">
-                  <p id="claveLogin"></p>
-                </div>
-                
-                <button type="submit" class="btn btnModal">Iniciar sesión</button>
-                <a href="/pages/registro.html" class="btn btnModal">Registrarse</a>
-              </form>
+              <div class="mb-3">
+                <label for="inputUsuario" class="form-label textoModal"
+                  >Usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputUsuario"
+                  aria-describedby="emailHelp"
+                />
+                <p id="usuarioLogin"></p>
+              </div>
+              <div class="mb-3">
+                <label for="inputClave" class="form-label textoModal"
+                  >Clave</label
+                >
+                <input type="password" class="form-control" id="inputClave" />
+                <p id="claveLogin"></p>
+              </div>
+
+              <button type="submit" class="btn btnModal">Iniciar sesión</button>
+              <a href="/pages/registro.html" class="btn btnModal"
+                >Registrarse</a
+              >
+            </form>
           </div>
-          
         </div>
       </div>
     </div>
