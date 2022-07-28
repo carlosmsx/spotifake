@@ -21,7 +21,7 @@ export function playMusic()
     {
         boton.innerHTML = `<i class="bi bi-play-circle"></i>`
         music.pause();
-        music.currentTime = 0; //vuelve al principio la reproduccion
+        music.currentTime = 0; 
         reproduciendo = false;
     }
     else

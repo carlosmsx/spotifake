@@ -82,7 +82,7 @@ export function validarfechaNacimiento(input) {
     let patron = /^(0[1-9]|[1-2]\d|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/;
 
     if (patron.test(input.value.trim())) {
-        // filtramos solo por año con exec. arreglo en la posicion 4
+        
         let anioIngresado = patron.exec(input.value.trim())[4];
         let anioactual = new Date().getFullYear();
 

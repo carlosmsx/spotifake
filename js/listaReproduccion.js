@@ -1,21 +1,21 @@
 import {login} from "./login.js"
 
 let tablaMiListaCanciones = document.getElementById("tablaMiListaCanciones");
-//recupero el paramentro
+
 const parametro = window.location.search;
 const urlParam = new URLSearchParams(parametro);
-//Recupero la lista de canciones
+
 let listaCanciones =
   JSON.parse(localStorage.getItem("vectorCancionesKey")) || [];
-  //Recupero la cancion agregada
+  
 let cancionAgregada = listaCanciones.find((cancion) => {
   return cancion.codigo == urlParam.get("codigo");
 });
 
 console.log(cancionAgregada);
-//traemos la lista de usuarios
+
 let listaUsuarios = JSON.parse(localStorage.getItem("vectorUsuariosKey")) || [];
-//traemos el usuario logueado 
+ 
 let usuarioActivo = localStorage.getItem('usuarioActivoKey') || 'nico@gmail.com';
 console.log(usuarioActivo);
 let indiceUsuario = listaUsuarios.findIndex((usuario) => {
@@ -31,7 +31,7 @@ if(indiceCancion == -1){
 }
 
 localStorage.setItem('vectorUsuariosKey',JSON.stringify(listaUsuarios));
-console.log(listaUsuarios);
+
 listaUsuarios[indiceUsuario].canciones.forEach(cancion => {
     crearMiLista(cancion);
 });
