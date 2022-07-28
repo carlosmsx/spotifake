@@ -1,4 +1,4 @@
-import { login, cambioNav } from "./login.js";
+import { login, cambioNav, cerrarSesion } from "./login.js";
 
 let listaCanciones =
   JSON.parse(localStorage.getItem("vectorCancionesKey")) || [];
@@ -13,8 +13,7 @@ function cargaTarjetas() {
   });
 }
 
-let usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivoKey")) || [];
-window.onload = cambioNav(usuarioActivo);
+cambioNav();
 
 //onclick="verDetalle(${cancion.codigo})"
 function crearTarjeta(cancion) {
@@ -60,6 +59,10 @@ window.verDetalle = (codigo) => {
   console.log(window.location.origin + `/pages/detalle.html`);
   window.location.href =
     window.location.origin + `/pages/detalle.html?codigo=${codigo}`;
+};
+
+window.cerrarSesion = () => {
+  cerrarSesion();
 };
 
 formLogin.addEventListener("submit", login);

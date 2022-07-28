@@ -42,8 +42,6 @@ export function login(e) {
         // insertar pagina del usuario
         window.location = "/index.html";
         localStorage.setItem("usuarioActivoKey", usuarioEncontrado.email);
-        usuarioActivo =
-          JSON.parse(localStorage.getItem("usuarioActivoKey")) || [];
         cambioNav();
         console.log();
       } else {
@@ -65,10 +63,13 @@ function usuarioNoRegistrado() {
   usuarioLogin.innerHTML = `<p class="text-danger text-sm">Usuario no encontrado</p>`;
 }
 
-export function cambioNav(usuarioActivo) {
+export function cambioNav() {
   let listaNav = document.getElementById("listaNav");
-  console.log("desde cambio nav" + usuarioActivo);
-  if ((usuarioActivo = null)) {
+  let usuarioActivo = localStorage.getItem("usuarioActivoKey") || null;
+  console.log("desde cambio nav " + usuarioActivo);
+  console.log(!usuarioActivo);
+  if (!usuarioActivo) {
+    console.log("hola");
     listaNav.innerHTML = `
     <li class="nav-item">
                 <a
@@ -104,6 +105,7 @@ export function cambioNav(usuarioActivo) {
                     data-bs-target="#modalLogin">Iniciar sesión</a></li>
               `;
   } else {
+    console.log("chau");
     listaNav.innerHTML = `
   <li class="nav-item">
                 <a
@@ -130,7 +132,13 @@ export function cambioNav(usuarioActivo) {
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link navLista">Cerrar sesión</a></li>
+                <a class="nav-link navLista" onclick="cerrarSesion()">Cerrar sesión</a></li>
               </li>`;
   }
+}
+
+export function cerrarSesion() {
+  console.log("cerrar");
+  localStorage.removeItem("usuarioActivoKey");
+  window.location = "index.html";
 }
